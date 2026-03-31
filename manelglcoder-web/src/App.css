@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Pixelify+Sans:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -10,4 +11,6 @@
 
 
     --font-logo: "Source Code Pro", monospace;
+    --font-pixel-number: "DotGothic16", sans-serif;
+    --font-pixel-texts: "Pixelify Sans", sans-serif;
 }

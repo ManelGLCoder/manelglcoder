@@ -8,9 +8,8 @@ const TopBarDesktop = () =>{
 
     const updateDate = () =>{
         setDate(new Date())
-        const day = today.toLocaleDateString(locale, { weekday: 'long' });
-        setCurrDate(`${day}, ${today.getDate()} ${today.toLocaleDateString(locale, { month: 'long' })}`)
-        setCurrTime(today.toLocaleTimeString(locale, { hour: 'numeric', hour12: true, minute: 'numeric' }))
+        setCurrDate(`${today.toLocaleDateString(locale, { day:'2-digit' ,month: 'numeric', year: '2-digit' })}`)
+        setCurrTime(today.toLocaleTimeString(locale, { hour: 'numeric', hour12: false, minute: 'numeric' }))
     }
 
     useEffect(() => {
@@ -27,10 +26,10 @@ const TopBarDesktop = () =>{
 
     return(
         <section className={`flex min-w-svw max-h-10 px-5
-        justify-between items-center bg-topbar`}>
-            <span className="mx-2 text-red-dark-logo font-logo">ManelGLCoder</span>
-            <div className="flex gap-2">
-                <span>{currDate}</span>
+        justify-between items-center text-red-dark-logo text-2xl bg-topbar`}>
+            <span className="mx-2 font-logo">ManelGLCoder</span>
+            <div className="flex gap-5 font-pixel-number">
+                <span >{currDate}</span>
                 <span>{currTime}</span>
             </div>
         </section>
