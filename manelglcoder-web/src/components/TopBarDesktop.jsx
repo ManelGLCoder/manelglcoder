@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 const TopBarDesktop = () =>{
 
+    const [resetInterval,setResetInterval] = useState(false)
     const [today, setDate] = useState(new Date())
     const [currDate, setCurrDate] = useState('')
     const [currTime, setCurrTime] = useState('')
@@ -13,16 +14,17 @@ const TopBarDesktop = () =>{
     }
 
     useEffect(() => {
-        const delay = 60*1000 
+        const delay = 10*1000 
         updateDate()
         const timer = setInterval(() => {
         setDate(new Date())
         updateDate()
+        setResetInterval(!resetInterval)
     }, delay);
     return () => {
         clearInterval(timer)
     }
-  }, []);
+  }, [resetInterval]);
 
     return(
         <section className={`flex min-w-svw max-h-10 px-5
