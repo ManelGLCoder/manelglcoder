@@ -13,7 +13,7 @@ const Desktop = () =>{
             <LatestProjectsButton/>
             <AboutMeButton/>
             <ContactButton/>
-            <OldestProjectButton name={'Proyectos Antiguos'} row={8} col={1}/>
+            <OldestProjectButton name={'Proyectos Antiguos'}/>
 
             <FolderWindow title={'Profesional'}/>
         </div>

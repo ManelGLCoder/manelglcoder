@@ -5,7 +5,7 @@ import Desktop from "./Desktop"
 const PCScreen = () =>{
     return(
         <>
-            <section className={`flex flex-col min-h-svh min-w-svw 
+            <section className={`flex flex-col min-h-svh min-w-svw
             bg-desktop bg-[url('/ManelGLCoder.svg')] bg-no-repeat bg-center bg-contain`}>
                 <TopBarDesktop/>
                 <Desktop/>
