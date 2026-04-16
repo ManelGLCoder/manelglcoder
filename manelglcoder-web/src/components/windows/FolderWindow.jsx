@@ -21,27 +21,14 @@ const FolderWindow = ({title,content}) =>{
                     </button>
                 </section>
                 <div className='overflow-y-auto flex flex-col my-1 gap-2'>
-                    <ProfessionalCard info={info3C}/>
-                    <ProfessionalCard info={infoWS}/>
+                    {
+                        content.map((element, i)=>{
+                            return(<ProfessionalCard key={i} info={element}/>)
+                        })
+                    }
                 </div>
             </section>
     )
 }
 
 export default FolderWindow
-
-const info3C = {
-    title: 'Desarrollo Web Slots - TRIPLE CHERRY',
-    period: 'Feb 2023 - Sep 2024',
-    companyDes: 'Triple Cherry es una empresa desarrolladora de slots de navegador para casinos online fundada en Valencia, España.',
-    rol: 'Front-End Developer',
-    tasks:['- Desarrollo de cliente de las slots','- Búsqueda y solución de bugs','- etc...']
-}
-
-const infoWS = {
-    title: 'Desarrollo Sofware Slots - Win Systems',
-    period: 'Jun - Dic 2022',
-    companyDes: 'Win Systems es una empresa desarrolladora de slots físicas para casinos con sede en San Cugat Del Valles, España.',
-    rol: 'Game Developer',
-    tasks:['- Desarrollo de cliente de las slots','- Búsqueda y solución de bugs','- etc...']
-}
