@@ -6,6 +6,7 @@ import OldestProjectButton from "../sections/old-projects/OldestProjectButton"
 
 import FolderWindow from "../windows/FolderWindow"
 import PROFESSIONAL_DATA from "../../dto/professional_dto"
+import PROJECTS_DATA from "../../dto/projects_dto"
 
 const Desktop = () =>{
     return(
@@ -16,7 +17,9 @@ const Desktop = () =>{
             <ContactButton/>
             <OldestProjectButton name={'Proyectos Antiguos'}/>
 
-            <FolderWindow title={'Profesional'} content={PROFESSIONAL_DATA}/>
+            {/* //TODO: cambiar nombre a desktopWindow o por el estilo */}
+            <FolderWindow title={'Profesional'} content={PROFESSIONAL_DATA} category={'professional'}/>
+            <FolderWindow title={'Proyectos'} content={PROJECTS_DATA} category={'project'}/>
         </div>
     )
 }

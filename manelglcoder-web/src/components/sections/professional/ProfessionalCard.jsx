@@ -43,7 +43,7 @@ const ProfessionalCard = ({info}) =>{
                     </section>
                 </div>
                 <div className='flex flex-col items-center max-w-50 m-2 '>
-                    <img className='p-1 object-cover' src={logo} alt="Imagen sobre el trabajo"/>
+                    <img className='p-1 object-cover' src={logo} alt="Logo Empresa"/>
                     <div className='flex flex-wrap justify-around gap-1 m-2'>
                         {
                             tools.map((tool, i)=>{
