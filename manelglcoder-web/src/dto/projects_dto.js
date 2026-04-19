@@ -14,7 +14,10 @@ import cbfw_galley_5 from '../assets/code-bcn-first-warrior/gallery_4.avif'
 const CODE_BCN_FIRST_WARRIOR = {
     title: 'CODE BCN: First Warrior [DEMO]',
     category: 'Personal Project',
-    img: cbfw_logo,
+    img: {
+        src: cbfw_logo,
+        alt: 'CODE BCN: First Warrior'
+    },
     period: 'Sep 2024 - Feb 2025',
     platform: 'GameJolt / Itch.io',
     gender: `Arcade Shoot 'Em Up 2.5D`,
