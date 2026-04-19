@@ -1,5 +1,5 @@
 import "../../App.css"
-import TopBarDesktop from "../TopBarDesktop"
+import TopBarDesktop from "../TopBars/TopBarDesktop"
 import Desktop from "./Desktop"
 
 const PCScreen = () =>{

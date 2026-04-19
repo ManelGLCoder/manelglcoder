@@ -35,19 +35,19 @@ const CODE_BCN_FIRST_WARRIOR = {
             {url: 'https://docs.google.com/spreadsheets/d/1G1eP6YhyQS7atzdI9GpikCls4j6UKBpEKA5LmrYBDyk/edit?gid=896835731#gid=896835731',  text:'Sistema de Balanceo'}
     ],
     tools:[
-        {img:Git, alt:'Git Icon'},
-        {img:SourceTree, alt:'Source Tree Icon'},
-        {img:GoogleSheets, alt:'Google Sheets Icon'},
-        {img:Aseprite, alt:'Aseprite Icon'},
-        {img:AppsScript, alt:'Google Apps Script Icon'},
-        {img:Godot, alt:'Godot Icon'},
+        {src:Git, alt:'Git Icon'},
+        {src:SourceTree, alt:'Source Tree Icon'},
+        {src:GoogleSheets, alt:'Google Sheets Icon'},
+        {src:Aseprite, alt:'Aseprite Icon'},
+        {src:AppsScript, alt:'Google Apps Script Icon'},
+        {src:Godot, alt:'Godot Icon'},
     ],
     gallery: [
-        {img:cbfw_galley_1, alt:'CODE BCN img 1'},
-        {img:cbfw_galley_2, alt:'CODE BCN img 2'},
-        {img:cbfw_galley_3, alt:'CODE BCN img 3'},
-        {img:cbfw_galley_4, alt:'CODE BCN img 4'},
-        {img:cbfw_galley_5, alt:'CODE BCN img 5'},
+        {src:cbfw_galley_1, alt:'CODE BCN img 1'},
+        {src:cbfw_galley_2, alt:'CODE BCN img 2'},
+        {src:cbfw_galley_3, alt:'CODE BCN img 3'},
+        {src:cbfw_galley_4, alt:'CODE BCN img 4'},
+        {src:cbfw_galley_5, alt:'CODE BCN img 5'},
     ],
     extra: [
         {

@@ -3,7 +3,7 @@ const ProjectTools = ({tools}) =>{
         <div className='flex flex-wrap justify-around gap-1 m-2'>
             {
                 tools.map((tool, i)=>{
-                    return(<img key={i} className='size-15' src={tool.img} alt={tool.alt}/>)
+                    return(<img key={i} className='size-15' src={tool.src} alt={tool.alt}/>)
                 })
             }
         </div>
