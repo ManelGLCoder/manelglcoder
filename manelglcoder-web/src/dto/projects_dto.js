@@ -6,11 +6,11 @@ import GoogleSheets from '../assets/logos/googlesheets_icon.svg'
 import Aseprite from '../assets/logos/aseprite_icon.svg'
 import AppsScript from '../assets/logos/appsscript_icon.svg'
 import Godot from '../assets/logos/godot_icon.svg'
-import cbfw_galley_1 from '../assets/code-bcn-first-warrior/gallery_1.avif'
-import cbfw_galley_2 from '../assets/code-bcn-first-warrior/gallery_2.avif'
-import cbfw_galley_3 from '../assets/code-bcn-first-warrior/gallery_3.avif'
-import cbfw_galley_4 from '../assets/code-bcn-first-warrior/gallery_4.avif'
-import cbfw_galley_5 from '../assets/code-bcn-first-warrior/gallery_4.avif'
+import cbfw_gallery_1 from '../assets/code-bcn-first-warrior/gallery_1.avif'
+import cbfw_gallery_2 from '../assets/code-bcn-first-warrior/gallery_2.avif'
+import cbfw_gallery_3 from '../assets/code-bcn-first-warrior/gallery_3.avif'
+import cbfw_gallery_4 from '../assets/code-bcn-first-warrior/gallery_4.avif'
+import cbfw_gallery_5 from '../assets/code-bcn-first-warrior/gallery_4.avif'
 const CODE_BCN_FIRST_WARRIOR = {
     title: 'CODE BCN: First Warrior [DEMO]',
     category: 'Personal Project',
@@ -43,11 +43,11 @@ const CODE_BCN_FIRST_WARRIOR = {
         {src:Godot, alt:'Godot Icon'},
     ],
     gallery: [
-        {src:cbfw_galley_1, alt:'CODE BCN img 1'},
-        {src:cbfw_galley_2, alt:'CODE BCN img 2'},
-        {src:cbfw_galley_3, alt:'CODE BCN img 3'},
-        {src:cbfw_galley_4, alt:'CODE BCN img 4'},
-        {src:cbfw_galley_5, alt:'CODE BCN img 5'},
+        {src:cbfw_gallery_1, alt:'CODE BCN img 1'},
+        {src:cbfw_gallery_2, alt:'CODE BCN img 2'},
+        {src:cbfw_gallery_3, alt:'CODE BCN img 3'},
+        {src:cbfw_gallery_4, alt:'CODE BCN img 4'},
+        {src:cbfw_gallery_5, alt:'CODE BCN img 5'},
     ],
     extra: [
         {
