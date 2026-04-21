@@ -32,18 +32,18 @@ const TRIPLE_CHERRY = {
     ],
     links: [{url: 'https://www.3cherry.com/our-slots/',  text:'DEMOS'}],
     tools:[
-        {img:Git, alt:'Git Icon'},
-        {img:SourceTree, alt:'Source Tree Icon'},
-        {img:Intellij, alt:'Intellij Idea Icon'},
-        {img:Kotlin, alt:'Kotlin Icon'},
-        {img:Jira, alt:'Jira Icon'},
-        {img:Confluence, alt:'Confluence Icon'},
+        {src:Git, alt:'Git Icon'},
+        {src:SourceTree, alt:'Source Tree Icon'},
+        {src:Intellij, alt:'Intellij Idea Icon'},
+        {src:Kotlin, alt:'Kotlin Icon'},
+        {src:Jira, alt:'Jira Icon'},
+        {src:Confluence, alt:'Confluence Icon'},
     ],
     gallery: [
-        {img:tc_galley_1, alt:'Slots 1'},
-        {img:tc_galley_2, alt:'Slots 2'},
-        {img:tc_galley_3, alt:'Slots 3'},
-        {img:tc_galley_4, alt:'Slots 4'},
+        {src:tc_galley_1, alt:'Slots 1'},
+        {src:tc_galley_2, alt:'Slots 2'},
+        {src:tc_galley_3, alt:'Slots 3'},
+        {src:tc_galley_4, alt:'Slots 4'},
     ]
 }
 
@@ -67,18 +67,18 @@ const WIN_SYSTEMS = {
         '- Docmentación'],
     links: [{url: 'https://winsysgroup.com/es/slot-games/',  text:'JUEGOS'}],
     tools:[
-        {img:Git, alt:'Git Icon'},
-        {img:SourceTree, alt:'Source Tree Icon'},
-        {img:VisualStudio, alt:'Visual Studio Icon'},
-        {img:CSharp, alt:'C# Icon'},
-        {img:Jira, alt:'Jira Icon'},
-        {img:Confluence, alt:'Confluence Icon'},
+        {src:Git, alt:'Git Icon'},
+        {src:SourceTree, alt:'Source Tree Icon'},
+        {src:VisualStudio, alt:'Visual Studio Icon'},
+        {src:CSharp, alt:'C# Icon'},
+        {src:Jira, alt:'Jira Icon'},
+        {src:Confluence, alt:'Confluence Icon'},
     ],
     gallery: [
-        {img:ws_galley_1, alt:'Slot 1'},
-        {img:ws_galley_2, alt:'Slot 2'},
-        {img:ws_galley_3, alt:'Slot 3'},
-        {img:ws_galley_4, alt:'Slot 4'},
+        {src:ws_galley_1, alt:'Slot 1'},
+        {src:ws_galley_2, alt:'Slot 2'},
+        {src:ws_galley_3, alt:'Slot 3'},
+        {src:ws_galley_4, alt:'Slot 4'},
     ]
 }
 

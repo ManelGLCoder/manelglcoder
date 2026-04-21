@@ -6,6 +6,7 @@ import OldestProjectButton from "../sections/old-projects/OldestProjectButton"
 
 import GalleryWindow from "../windows/GalleryWindow"
 import FolderWindow from "../windows/FolderWindow"
+import AboutMeWindow from "../windows/AboutMeWindow"
 import PROFESSIONAL_DATA from "../../dto/professional_dto"
 import PROJECTS_DATA from "../../dto/projects_dto"
 
@@ -33,7 +34,8 @@ const Desktop = () =>{
 
             <FolderWindow title={'Profesional'} content={PROFESSIONAL_DATA} category={'professional'}/>
             <FolderWindow title={'Proyectos'} content={PROJECTS_DATA} category={'project'}/>
-            <GalleryWindow title={'Galería'} content={TMP_GALLERY_CONTENT}/>
+            <AboutMeWindow/>
+            {/* <GalleryWindow title={'Galería'} content={TMP_GALLERY_CONTENT}/> */}
         </div>
     )
 }
