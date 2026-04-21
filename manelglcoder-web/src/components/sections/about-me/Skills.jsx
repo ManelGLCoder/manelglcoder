@@ -1,5 +1,5 @@
 import { SKILLS_DATA } from "../../../dto/about_me_dto"
-const SkillsCard = () =>{
+const Skills = () =>{
     return(
         <div className='flex flex-wrap justify-center items-center gap-1 m-2'>
             {
@@ -11,4 +11,4 @@ const SkillsCard = () =>{
     )
 }
 
-export default SkillsCard
+export default Skills

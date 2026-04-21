@@ -2,7 +2,7 @@ import TmpICon from '../../../assets/Icons/gallery_icon.svg'
 
 import KeyPersonalityTraits from './KeyPersonalityTraits'
 import SoftSkills from './SoftSkills'
-import SkillsCard from './SkillsCard'
+import Skills from './Skills'
 
 const ManelGLCard = () =>{
     return(
@@ -15,7 +15,7 @@ const ManelGLCard = () =>{
                     <div className='flex gap-1'>
                         <KeyPersonalityTraits/>
                         <SoftSkills/>
-                        <SkillsCard/>
+                        <Skills/>
                     </div>
                 </div>
             </section>

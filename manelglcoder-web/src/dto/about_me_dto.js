@@ -42,3 +42,17 @@ export const SKILLS_DATA =[
     {src:UnrealEngine, alt:'Unreal Engine Icon'},
     {src:GoogleSheets, alt:'Google Sheets Icon'},
 ]
+
+export const EXPERIENCE_DATA = [
+    {company: 'Triple Cherry', period: 'Feb 2023 - Sep 2024', rol: 'Front End Developer(Kotlin)'},
+    {company: 'Win Systems', period: 'Jun - Dic 2022', rol: 'Game Developer(C#)'},
+    {company: 'Misstep Studio - Level Up Game Dev Hub', period: '2021 - 2022', rol: `Productor / Programador en "Death By Misstep" (Unity - C#)`},
+    {company: 'U-Play Online', period: 'Oct 2019 - Feb 2020', rol: 'QA Tester'},
+]
+
+export const STUDIES_DATA = [
+    {where: 'PowerUps', period: '2023', category:'Curso', title: 'Solid Y Clean Code Para Videojuegos', certificated:true},
+    {where: 'Udemy', period: '2021', category:'Curso', title: 'Programar Blueprints en Unreal Engine De 0 A Profesional', certificated:true},
+    {where: 'Udemy', period: '2021 - 2022', category:'Curso', title: 'Máster En Programación De Videojuegos Con Unity 2020 Y C#', certificated:true},
+    {where: 'Enti-UB', period: '2016 - 2020', category:'Grado', title: 'Contenidos Digitales Interactivos', certificated:true},
+]
