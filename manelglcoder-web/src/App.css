@@ -4,6 +4,12 @@
 @theme {
     --color-desktop: #1d1b20;
     --color-topbar: #c6bfcf;
+    --color-color_line: #1d1b20;
+    --color-color_vertical_line: #b2003e;
+    --color-color_bold: #b2003e;
+    --color-color_semibold: #791136;
+    --color-card: #f5f5f5;
+    --color-window: #791136;
 
     --color-red-light-logo: #b2003e;
     --color-red-dark-logo: #791136;

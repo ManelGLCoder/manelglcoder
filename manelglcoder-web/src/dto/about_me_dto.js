@@ -1,8 +1,3 @@
-
-export const KEY_PERSONALITY_TRAITS_DATA = [
-    'Creativo', 'Extrovertido', 'Positivo', 'Muy trabajador', 'Adaptativo'
-]
-
 export const SOFT_SKILLS_DATA = [
     'Técnicas de Usuabilidad', 'Comunicación', 'Organizado', 'Proactivo', 'Trabajo en Equipo'
 ]
@@ -46,7 +41,7 @@ export const SKILLS_DATA =[
 export const EXPERIENCE_DATA = [
     {company: 'Triple Cherry', period: 'Feb 2023 - Sep 2024', rol: 'Front End Developer(Kotlin)'},
     {company: 'Win Systems', period: 'Jun - Dic 2022', rol: 'Game Developer(C#)'},
-    {company: 'Misstep Studio - Level Up Game Dev Hub', period: '2021 - 2022', rol: `Productor / Programador en "Death By Misstep" (Unity - C#)`},
+    {company: 'Misstep Studio', period: '2021 - 2022', rol: `Productor/Programador "Death By Misstep" (Unity)`},
     {company: 'U-Play Online', period: 'Oct 2019 - Feb 2020', rol: 'QA Tester'},
 ]
 

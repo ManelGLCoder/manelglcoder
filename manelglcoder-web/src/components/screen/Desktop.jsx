@@ -33,10 +33,10 @@ const Desktop = () =>{
             <ContactButton/>
             <OldestProjectButton name={'Proyectos Antiguos'}/>
 
-            <FolderWindow title={'Profesional'} content={PROFESSIONAL_DATA} category={'professional'}/>
-            <FolderWindow title={'Proyectos'} content={PROJECTS_DATA} category={'project'}/>
+            {/* <FolderWindow title={'Profesional'} content={PROFESSIONAL_DATA} category={'professional'}/> */}
+            {/* <FolderWindow title={'Proyectos'} content={PROJECTS_DATA} category={'project'}/> */}
             <AboutMeWindow/>
-            <ContactMeWindow/>
+            {/* <ContactMeWindow/> */}
             {/* <GalleryWindow title={'Galería'} content={TMP_GALLERY_CONTENT}/> */}
         </div>
     )

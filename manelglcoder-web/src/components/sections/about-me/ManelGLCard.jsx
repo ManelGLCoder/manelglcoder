@@ -1,22 +1,27 @@
-import TmpICon from '../../../assets/Icons/gallery_icon.svg'
+import TmpICon from '../../../../public/ManelGLCoder.svg'
 
-import KeyPersonalityTraits from './KeyPersonalityTraits'
 import SoftSkills from './SoftSkills'
 import Skills from './Skills'
+import { TITLE_CARD, BG_CARD } from '../../../utilities/classname_utilities'
 
 const ManelGLCard = () =>{
     return(
-        <div className="flex flex-col mx-2 gap-1 bg-amber-500">
-            <span className="text-center bg-topbar font-bold">MANEL GISBERT LÓPEZ</span>
-            <section className="flex justify-center my-2 items-center">
-                <img className='p-1 size-40' src={TmpICon} alt="Manel Photo"/>
+        <div className={`flex flex-col mx-2 my-4 gap-1 ${BG_CARD}`}>
+            <span className={TITLE_CARD}>MANEL GISBERT LÓPEZ</span>
+            <section className="relative -top-4 flex justify-center items-center">
+                <img className='p-1 size-38' src={TmpICon} alt="Manel Photo"/>
                 <div className="flex flex-1 flex-col gap-2 mx-2">
-                    <span className=''>Un desarrollador de videojuegos y webs nacido y viviendo en Barcelona, España</span>
-                    <div className='flex gap-1'>
-                        <KeyPersonalityTraits/>
-                        <SoftSkills/>
-                        <Skills/>
-                    </div>
+                    <p className=''>Me considero una persona <span className='font-bold text-color_bold'> extrovertida</span>
+                        ,
+                        <span className='font-bold text-color_bold'> positiva </span>
+                        y
+                        <span className='font-bold text-color_bold'> muy trabajadora </span>
+                        . Me gusta planificar mis actividades, tanto profesioanles como de ocio. Soy muy
+                        <span className='font-bold text-color_bold'> metódico</span>
+                        , me gustan las cosas bien hechas por insignificante que sean. Me adapto a las diferentes
+                        situaciones que se me presentan. El trabajo en equipo me atrae pero funciono de igual o mejor
+                        manera en los trabajos individuales.
+                    </p>
                 </div>
             </section>
         </div>
