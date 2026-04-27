@@ -8,20 +8,23 @@ import Skills from "../sections/about-me/Skills"
 const AboutMeWindow = () =>{
 
     return(
-        <section className={`absolute left-10 top-15 flex flex-col min-h-2/3 min-w-2xl max-w-2/4 max-h-2/3 bg-window`}>
-                <TopBarWindow title='Sobre Mi'/>
-                <div className='overflow-y-auto flex flex-col my-1 gap-2'>
-                    <ManelGLCard/>
-                    <div className="flex justify-between gap-2 mx-2">
+        <section 
+        className={`absolute left-10 top-15 
+        flex flex-col min-h-2/3 min-w-2xl max-w-2/4 max-h-2/3 
+        border-2 border-red-dark-logo bg-desktop`}>
+            <TopBarWindow title='Sobre Mi'/>
+            <div className='overflow-y-auto flex flex-col my-1 gap-4'>
+                <ManelGLCard/>
+                <div className="flex justify-between gap-4 mx-4">
+                    <div className="flex flex-col gap-6">
                         <ExperienceCard/>
-                        <StudiesCard/>
-                    </div>
-                    <div className='flex gap-1'>
                         <SoftSkills/>
-                        <Skills/>
                     </div>
+                    <StudiesCard/>
                 </div>
-            </section>
+                <Skills/>
+            </div>
+        </section>
     )
 }
 

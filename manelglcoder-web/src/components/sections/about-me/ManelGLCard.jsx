@@ -6,12 +6,12 @@ import { TITLE_CARD, BG_CARD } from '../../../utilities/classname_utilities'
 
 const ManelGLCard = () =>{
     return(
-        <div className={`flex flex-col mx-2 my-4 gap-1 ${BG_CARD}`}>
+        <div className={`flex flex-col mx-4 my-4 gap-1 ${BG_CARD}`}>
             <span className={TITLE_CARD}>MANEL GISBERT LÓPEZ</span>
             <section className="relative -top-4 flex justify-center items-center">
                 <img className='p-1 size-38' src={TmpICon} alt="Manel Photo"/>
                 <div className="flex flex-1 flex-col gap-2 mx-2">
-                    <p className=''>Me considero una persona <span className='font-bold text-color_bold'> extrovertida</span>
+                    <p className='px-2 font-semibold text-color_semibold '>Me considero una persona <span className='font-bold text-color_bold'> extrovertida</span>
                         ,
                         <span className='font-bold text-color_bold'> positiva </span>
                         y
