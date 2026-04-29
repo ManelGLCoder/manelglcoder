@@ -64,7 +64,7 @@ const WIN_SYSTEMS = {
         '- Desarrollo de cliente de las slots',
         '- Implementación de nuevas features',
         '- Búsqueda y solución de bugs',
-        '- Docmentación'],
+        '- Documentación'],
     links: [{url: 'https://winsysgroup.com/es/slot-games/',  text:'JUEGOS'}],
     tools:[
         {src:Git, alt:'Git Icon'},

@@ -1,32 +1,53 @@
 import LinkIcon from '../../../assets/Icons/link_icon.svg'
 import GalleryIcon from '../../../assets/Icons/gallery_icon.svg'
+import ToolsIcon from '../../../assets/Icons/tools_icon.svg'
+import DateIcon from '../../../assets/Icons/hover_date_icon.svg'
+import RoleIcon from '../../../assets/Icons/role_icon.svg'
+import TasksIcon from '../../../assets/Icons/tasks_icon.svg'
+import HorizontalLineSeparator from '../../HorizontalLineSeparator'
+
+import { TITLE_CARD, BG_CARD, BUTTON_STYLE } from '../../../utilities/classname_utilities'
 
 const ProfessionalCard = ({info}) =>{
     const {title, logo, period, companyDes, rol, tasks, links, tools, gallery} = info
     return(
-        <div className="flex flex-col mx-2 gap-1 bg-amber-500">
-            <span className="text-center bg-topbar font-bold">{title}</span>
-            <section className="flex">
-                <div className="flex flex-1 flex-col mx-2">
-                    <span className='font-bold'>{period}</span>
-                    <p>{companyDes}</p>
-                    <div className="relative mx-2 py-4">
-                        <div className="w-full border-b border-red-light-logo"></div>
+        <div className={`flex flex-col mx-4 my-5 gap-1 ${BG_CARD}`}>
+            <span className={TITLE_CARD}>{title}</span>
+                <div className="flex flex-1 flex-col mx-2 gap-2">
+                    <div className='flex gap-2'>
+                        <div className='max-w-50 m-2'>
+                            <img className='p-1 object-cover' src={logo} alt="Logo Empresa"/>
+                        </div>
+                        <div className='flex flex-col'>
+                            <div className='flex items-center gap-2'>
+                                <img className='size-5' src={DateIcon} alt="Date Icon" />
+                                <span className='font-bold text-color_bold'>{period}</span>
+                            </div>
+                            <p className='text-color_semibold font-semibold'>{companyDes}</p>
+                        </div>
                     </div>
-                    <section className="flex flex-col">
-                        <div className="flex flex-1 flex-col bg-amber-800">
-                            <span className='font-bold'>ROL <span className='font-normal'>{rol}</span></span>
-                            <span className='font-bold'>TAREAS</span>
+                    
+                    <HorizontalLineSeparator/>
+                    <div className='flex gap-5'>
+                        <section className="flex-1 flex flex-col gap-2 mx-2 font-bold text-color_bold">
+                            <div className='relative -top-2 flex gap-1 items-center'>
+                                <img className='size-7' src={RoleIcon} alt="Role Icon" />
+                                <span>{rol}</span>
+                            </div>
+                            <div className='flex gap-1 items-center'>
+                                <img className='size-7' src={TasksIcon} alt="Tasks Icon" />
+                                <span>TAREAS</span>
+                            </div>
                             {
                                 tasks.map((task, i)=>{
-                                    return(<span key={i}>{task}</span>)
+                                    return(<span className='pl-6 text-color_semibold font-semibold' key={i}>{task}</span>)
                                 })
                             }
-                            <div className='flex gap-1 justify-center items-center'>
+                            <div className='flex gap-2 justify-start items-center'>
                                 {
                                     links.map((link, i)=>{
                                         return(
-                                        <button key={i} className='flex justify-center items-center max-w-fit p-1 gap-1 bg-violet-600 hover:bg-violet-400'
+                                        <button key={i} className={BUTTON_STYLE}
                                         onClick={()=> window.open(link.url, "_blank")}>
                                             <img className='size-7' src={LinkIcon} alt="Link Icon" />
                                             <span className='text-center'>{link.text}</span>
@@ -34,26 +55,27 @@ const ProfessionalCard = ({info}) =>{
                                     )
                                     })
                                 }
-                                <button className='flex justify-center items-center max-w-fit p-1 gap-1 bg-red-500 hover:bg-red-300'>
+                                <button className={BUTTON_STYLE}>
                                     <img className='size-7' src={GalleryIcon} alt="Gallery Icon" />
                                     <span>GALERIA</span>
                                 </button>
                             </div>
+                        </section>
+                        <div className='flex flex-col gap-2'>
+                            <div className='flex gap-2 items-center'>
+                                <img className='size-7' src={ToolsIcon} alt="Tools Icon" />
+                                <span className='text-color_bold font-bold'>Tools</span>
+                            </div>
+                            <div className='flex flex-wrap justify-between w-50 gap-3 mx-2'>
+                                {
+                                    tools.map((tool, i)=>{
+                                        return(<img key={i} className='size-8' src={tool.src} alt={tool.alt}/>)
+                                    })
+                                }
+                            </div>
                         </div>
-                    </section>
-                </div>
-                <div className='flex flex-col items-center max-w-50 m-2 '>
-                    <img className='p-1 object-cover' src={logo} alt="Logo Empresa"/>
-                    <div className='flex flex-wrap justify-around gap-1 m-2'>
-                        {
-                            tools.map((tool, i)=>{
-                                return(<img key={i} className='size-15' src={tool.src} alt={tool.alt}/>)
-                            })
-                        }
                     </div>
                 </div>
-                
-            </section>
         </div>
     )
 }
