@@ -13,7 +13,7 @@ const StudiesCard = () =>{
                 {
                     STUDIES_DATA.map((study,i)=>{
                         return(
-                            <li className='flex flex-col' key={i}>
+                            <li className='relative -top-4 flex flex-col my-2' key={i}>
                                 <div className="flex gap-1 items-center font-bold">
                                     {
                                         study.certificated ? <img className="size-8" src={CertificateIcon} alt="Certificate Icon" /> : null
@@ -21,13 +21,15 @@ const StudiesCard = () =>{
                                     <span className="text-color_bold">{study.category}</span>
                                     <span>{study.title}</span>
                                 </div>
-                                <div className="pl-8 flex gap-2 items-center">
-                                    <img className="size-8" src={DateIcon} alt="Date Icon" />
-                                    <span>{study.period}</span>
-                                </div>
-                                <div className="pl-8 flex gap-2 items-center">
-                                    <img className="size-8" src={CompanyIcon} alt="Company Icon" />
-                                    <span>{study.where}</span>
+                                <div className="flex justify-start gap-3">
+                                    <div className="flex gap-2 items-center">
+                                        <img className="size-8" src={DateIcon} alt="Date Icon" />
+                                        <span>{study.period}</span>
+                                    </div>
+                                    <div className="flex gap-2 items-center">
+                                        <img className="size-8" src={CompanyIcon} alt="Company Icon" />
+                                        <span>{study.where}</span>
+                                    </div>
                                 </div>
                             </li>
                         )
