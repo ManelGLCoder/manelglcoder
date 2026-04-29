@@ -1,6 +1,6 @@
 import ProfessionalButton from "../sections/professional/ProfesionalButton"
 import LatestProjectsButton from "../sections/latest-projects/LatestProjectsButton"
-import AboutMeButton from "../sections/about-me/AboutMeButton"
+import AboutMeButton from "../buttons/AboutMeButton"
 import ContactButton from "../sections/contact-me/ContactButton"
 import OldestProjectButton from "../sections/old-projects/OldestProjectButton"
 

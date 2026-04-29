@@ -1,6 +1,6 @@
-import DesktopButton from "../../buttons/DesktopButton"
-import Icon from '../../../assets/Icons/Documento.svg'
-import HoverIcon from '../../../assets/Icons/Documento_move_over.svg'
+import DesktopButton from "./DesktopButton"
+import Icon from '../../assets/Icons/Documento.svg'
+import HoverIcon from '../../assets/Icons/Documento_move_over.svg'
 
 const AboutMeButton = () => {
     return(
