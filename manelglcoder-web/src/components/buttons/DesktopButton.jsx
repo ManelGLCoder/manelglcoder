@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { TEXT_BUTTON } from '../../utilities/classname_utilities';
 
 const DesktopButton = ({name, icon, hoverIcon}) =>{
     const [over, setOver] = useState(false);
@@ -10,7 +11,7 @@ const DesktopButton = ({name, icon, hoverIcon}) =>{
             <img className='size-15' 
             src={over ? icon : hoverIcon}
             alt="Button Icon" />
-            <span className=' text-button-text'>{name}</span>
+            <span className={TEXT_BUTTON}>{name}</span>
         </button>
     )
 }

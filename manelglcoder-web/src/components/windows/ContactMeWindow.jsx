@@ -25,7 +25,7 @@ const ContactMeWindow = () =>{
         <section className={`absolute left-10 top-15 flex flex-col
         min-h-fit min-w-xl max-h-2/3 max-w-xl
         border-2 border-red-dark-logo bg-desktop`}>
-                <TopBarWindow title='Conctacta Conmigo'/>
+                <TopBarWindow title='CONTACTA CONMIGO'/>
                 <div className='flex flex-col mx-4 my-5 gap-4'>
                     <ToInput/>
                     <FromInput sendFromData={handleFromData}/>

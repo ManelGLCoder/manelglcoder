@@ -12,7 +12,7 @@ import MoreInfo from './MoreInfo'
 
 import ProjectIcon from '../../../assets/Icons/project_icon.svg'
 import DateIcon from '../../../assets/Icons/hover_date_icon.svg'
-import { TITLE_CARD, BG_CARD, BUTTON_STYLE } from '../../../utilities/classname_utilities'
+import { TITLE_CARD, BG_CARD, BUTTON_STYLE, TEXT_SUB_TITLE, TEXT_NORMAL } from '../../../utilities/classname_utilities'
 
 const ProjectCard = ({info}) =>{
     const {title, img, category, period, links, tools, gallery, extra} = info
@@ -23,13 +23,13 @@ const ProjectCard = ({info}) =>{
             <span className={TITLE_CARD}>{category}</span>
             <section className="flex">
                 <div className="flex flex-1 flex-col mx-4 gap-2">
-                    <div className='flex gap-1 items-center text-color_bold font-bold'>
+                    <div className='flex gap-1 items-center'>
                         <img className='size-5' src={ProjectIcon} alt="Project Icon" />
-                        <span>{title}</span>
+                        <span className={TEXT_SUB_TITLE}>{title}</span>
                     </div>
-                    <div className='flex gap-1 items-center text-color_semibold font-semibold'>
+                    <div className='flex gap-1 items-center'>
                         <img className='size-5' src={DateIcon} alt="Date Icon" />
-                        <span>{period}</span>
+                        <span className={TEXT_NORMAL}>{period}</span>
                     </div>
                     <ProjectDataSheet info={info}/>
                     <HorizontalLineSeparator/>

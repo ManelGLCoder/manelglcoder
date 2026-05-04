@@ -3,7 +3,7 @@ import TopBarWindow from '../TopBars/TopBarWindow';
 
 import PrevIcon from '../../assets/Icons/prev_icon.svg'
 import NextIcon from '../../assets/Icons/next_icon.svg'
-import { BUTTON_STYLE, BG_CARD } from '../../utilities/classname_utilities';
+import { BUTTON_STYLE, BG_CARD, TEXT_TITLE } from '../../utilities/classname_utilities';
 
 const GalleryWindow = ({title,content}) =>{
     const [index, setIndex] = useState(0)
@@ -21,7 +21,7 @@ const GalleryWindow = ({title,content}) =>{
                     <button className={`flex-1 flex justify-center ${BUTTON_STYLE} max-w-full`} onClick={prevImg}>
                         <img className='size-10' src={PrevIcon} alt="Prev Icon" />
                     </button>
-                    <span className='mx-4 text-2xl text-color_bold font-bold'>{` ${index + 1} - ${content.length}`}</span>
+                    <span className={`mx-4 text-2xl ${TEXT_TITLE}`}>{` ${index + 1} - ${content.length}`}</span>
                     <button className={`flex-1 flex justify-center ${BUTTON_STYLE} max-w-full`} onClick={nextImg}>
                         <img className='size-10' src={NextIcon} alt="Next Icon" />
                     </button>

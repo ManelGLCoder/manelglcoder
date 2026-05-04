@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 
 import ClockIcon from '../../assets/Icons/clock_icon.svg'
 import DateIcon from '../../assets/Icons/date_icon.svg'
+import { TEXT_NORMAL } from "../../utilities/classname_utilities"
 
 const TopBarDesktop = () =>{
 
@@ -33,7 +34,7 @@ const TopBarDesktop = () =>{
     return(
         <section className={`flex min-w-svw max-h-10 px-5
         justify-between items-center text-red-dark-logo text-2xl bg-topbar`}>
-            <span className="mx-2 font-logo">ManelGLCoder</span>
+            <span className={`mx-2 ${TEXT_NORMAL}`}>ManelGLCoder</span>
             <div className="flex gap-2 justify-center items-center font-pixel-number">
                 <img className="size-7" src={DateIcon} alt="Date Icon" />
                 <span>{currDate}</span>

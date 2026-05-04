@@ -1,5 +1,5 @@
 import { EXPERIENCE_DATA } from "../../../dto/about_me_dto"
-import { TITLE_CARD, BG_CARD, BEFORE_VERTICAL_LINE } from "../../../utilities/classname_utilities"
+import { TITLE_CARD, BG_CARD, BEFORE_VERTICAL_LINE, TEXT_NORMAL } from "../../../utilities/classname_utilities"
 
 import OpenLinkButton from "../../buttons/OpenLinkButton"
 import CompanyIcon from "../../../assets/Icons/company_icon.svg"
@@ -13,7 +13,7 @@ const ExperienceCard = () =>{
                 {
                     EXPERIENCE_DATA.map((experience,i)=>{
                         return(
-                            <li className="flex flex-col gap-1 font-semibold text-color_semibold" key={i}>
+                            <li className={`flex flex-col gap-1 ${TEXT_NORMAL}`} key={i}>
                                 <div className="flex justify-center items-center gap-0.5 ">
                                     <OpenLinkButton click={''}/>
                                     <img className="size-5" src={CompanyIcon} alt="Company Icon"/>

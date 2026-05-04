@@ -1,4 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Pixelify+Sans:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+@font-face {
+    font-family: Pix32;
+    src: url("../src/assets/fonts/Pix32.ttf");
+}
+@font-face {
+    font-family: DogicaPixelRegular;
+    src: url("../src/assets/fonts/dogicapixel.ttf");
+}
+@font-face {
+    font-family: DogicaPixelBold;
+    src: url("../src/assets/fonts/dogicapixelbold.ttf");
+}
+@font-face {
+    font-family: Determination;
+    src: url("../src/assets/fonts/determination.ttf");
+}
+@font-face {
+    font-family: MinecraftiaRegular;
+    src: url("../src/assets/fonts/Minecraftia-Regular.ttf");
+}
+@font-face {
+    font-family: ExePixelPerfect;
+    src: url("../src/assets/fonts/EXEPixelPerfect.ttf");
+}
 @import "tailwindcss";
 
 @theme {
@@ -6,6 +31,8 @@
     --color-topbar: #c6bfcf;
     --color-color_line: #b2003e;
     --color-color_vertical_line: #b2003e;
+    --color-title: #b2003e;
+    --color-normal:  #791136;
     --color-color_bold: #b2003e;
     --color-color_semibold: #791136;
     --color-card: #c7bed1;
@@ -20,4 +47,11 @@
     --font-logo: "Source Code Pro", monospace;
     --font-pixel-number: "DotGothic16", sans-serif;
     --font-pixel-texts: "Pixelify Sans", sans-serif;
+
+    --font-pix32: Pix32, "sans-serif";
+    --font-dogica-r: DogicaPixelRegular, "sans-serif";
+    --font-dogica-b: DogicaPixelBold, "sans-serif";
+    --font-determination: Determination, "sans-serif";
+    --font-minecraftia: MinecraftiaRegular, "sans-serif";
+    --font-exe-pixel-perfect: ExePixelPerfect, "sans-serif";
 }
