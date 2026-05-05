@@ -1,6 +1,6 @@
 import DesktopButton from "../../buttons/DesktopButton"
-import Icon from '../../../assets/Icons/Papelera.svg'
-import HoverIcon from '../../../assets/Icons/Papelera_mouse_over.svg'
+import Icon from '../../../assets/Icons/lock_icon.svg'
+import HoverIcon from '../../../assets/Icons/hover_lock_icon.svg'
 
 const OldestProjectButton = () =>{
     return(

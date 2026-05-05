@@ -1,6 +1,6 @@
 import DesktopButton from "../../buttons/DesktopButton"
-import Icon from '../../../assets/Icons/Carpeta.svg'
-import HoverIcon from '../../../assets/Icons/Carpeta_mouse_over.svg'
+import Icon from '../../../assets/Icons/folder_icon.svg'
+import HoverIcon from '../../../assets/Icons/hover_folder_icon.svg'
 
 const ProfessionalButton = () =>{
     return(

@@ -1,6 +1,6 @@
 import DesktopButton from "../../buttons/DesktopButton"
-import Icon from '../../../assets/Icons/Ordenador.svg'
-import HoverIcon from '../../../assets/Icons/Ordenador_mouse_over.svg'
+import Icon from '../../../assets/Icons/mail_icon.svg'
+import HoverIcon from '../../../assets/Icons/hover_mail_icon.svg'
 
 const ContactButton = () =>{
     return(
