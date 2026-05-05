@@ -1,5 +1,5 @@
 import { EXPERIENCE_DATA } from "../../../dto/about_me_dto"
-import { TITLE_CARD, BG_CARD, BEFORE_VERTICAL_LINE, TEXT_NORMAL } from "../../../utilities/classname_utilities"
+import { TITLE_CARD, BG_CARD, BEFORE_VERTICAL_LINE, TEXT_NORMAL, TEXT_CENTERED_WITH_ICON, ICON_SIZE } from "../../../utilities/classname_utilities"
 
 import OpenLinkButton from "../../buttons/OpenLinkButton"
 import CompanyIcon from "../../../assets/Icons/company_icon.svg"
@@ -16,11 +16,11 @@ const ExperienceCard = () =>{
                             <li className={`flex flex-col gap-1 ${TEXT_NORMAL}`} key={i}>
                                 <div className="flex justify-center items-center gap-0.5 ">
                                     <OpenLinkButton click={''}/>
-                                    <img className="size-5" src={CompanyIcon} alt="Company Icon"/>
-                                    <span className="font-bold text-color_bold">{experience.company}</span>
-                                    <div className={`w-full flex-1 mx-2 border-b border-red-light-logo`}/>
-                                    <img className="size-5" src={DateIcon} alt="Date Icon"/>
-                                    <span>{experience.period}</span>
+                                    <img className={ICON_SIZE} src={CompanyIcon} alt="Company Icon"/>
+                                    <span className={`text-color_bold ${TEXT_CENTERED_WITH_ICON}`}>{experience.company}</span>
+                                    <div className={`w-full flex-1 mx-2 py-0.5 border-b border-red-light-logo`}/>
+                                    <img className={ICON_SIZE} src={DateIcon} alt="Date Icon"/>
+                                    <span className={TEXT_CENTERED_WITH_ICON}>{experience.period}</span>
                                 </div>
                                 <span className={`relative pl-5 mx-2 ${BEFORE_VERTICAL_LINE}`}>
                                     {experience.rol}

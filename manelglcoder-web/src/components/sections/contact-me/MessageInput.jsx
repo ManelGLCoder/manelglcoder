@@ -4,7 +4,7 @@ import { TITLE_CARD, BG_CARD, TEXT_NORMAL} from "../../../utilities/classname_ut
 const MessageInput = ({sendMessageData}) =>{
     const [data, setData] = useState('')
     return(
-        <div className={`flex flex-col p-1 min-h-xl ${BG_CARD}`}>
+        <div className={`flex flex-col p-1 h-1/3 ${BG_CARD}`}>
             <span className={TITLE_CARD}>Mensaje:</span>
             <textarea
                 className={`relative -top-2 flex-1 mx-2 ${TEXT_NORMAL}`} rows="10"

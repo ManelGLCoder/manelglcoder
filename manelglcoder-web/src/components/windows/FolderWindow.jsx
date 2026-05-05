@@ -5,8 +5,8 @@ import TopBarWindow from '../TopBars/TopBarWindow';
 const FolderWindow = ({title,content, category}) =>{
     return(
         <section className={`absolute right-10 top-15 flex flex-col 
-        min-h-2/3 min-w-2xl max-w-1/3 max-h-2/3 border-2
-        border-red-dark-logo bg-desktop`}>
+        w-2/5 h-2/3 border-2
+        border-red-dark-logo bg-window-bg`}>
                 <TopBarWindow title={title}/>
                 <div className='overflow-y-auto flex flex-col my-1 gap-2'>
                     {

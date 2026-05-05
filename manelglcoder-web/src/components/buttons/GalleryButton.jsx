@@ -1,11 +1,11 @@
 import GalleryIcon from '../../assets/Icons/gallery_icon.svg'
-import { BUTTON_STYLE } from '../../utilities/classname_utilities'
+import { BUTTON_STYLE, ICON_SIZE, TEXT_CENTERED_WITH_ICON } from '../../utilities/classname_utilities'
 
 const GalleryButton = ({galleryInfo}) =>{
     return(
         <button className={BUTTON_STYLE}>
-            <img className='size-7' src={GalleryIcon} alt="Gallery Icon" />
-            <span>GALERIA</span>
+            <img className={ICON_SIZE} src={GalleryIcon} alt="Gallery Icon" />
+            <span className={TEXT_CENTERED_WITH_ICON}>GALERÍA</span>
         </button>
     )
 }

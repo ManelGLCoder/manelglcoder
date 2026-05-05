@@ -12,7 +12,7 @@ import MoreInfo from './MoreInfo'
 
 import ProjectIcon from '../../../assets/Icons/project_icon.svg'
 import DateIcon from '../../../assets/Icons/hover_date_icon.svg'
-import { TITLE_CARD, BG_CARD, BUTTON_STYLE, TEXT_SUB_TITLE, TEXT_NORMAL } from '../../../utilities/classname_utilities'
+import { TITLE_CARD, BG_CARD, BUTTON_STYLE, TEXT_SUB_TITLE, TEXT_NORMAL, ICON_SIZE, TEXT_CENTERED_WITH_ICON } from '../../../utilities/classname_utilities'
 
 const ProjectCard = ({info}) =>{
     const {title, img, category, period, links, tools, gallery, extra} = info
@@ -24,12 +24,12 @@ const ProjectCard = ({info}) =>{
             <section className="flex">
                 <div className="flex flex-1 flex-col mx-4 gap-2">
                     <div className='flex gap-1 items-center'>
-                        <img className='size-5' src={ProjectIcon} alt="Project Icon" />
-                        <span className={TEXT_SUB_TITLE}>{title}</span>
+                        <img className={ICON_SIZE} src={ProjectIcon} alt="Project Icon" />
+                        <span className={`${TEXT_SUB_TITLE} ${TEXT_CENTERED_WITH_ICON}`}>{title}</span>
                     </div>
                     <div className='flex gap-1 items-center'>
-                        <img className='size-5' src={DateIcon} alt="Date Icon" />
-                        <span className={TEXT_NORMAL}>{period}</span>
+                        <img className={ICON_SIZE} src={DateIcon} alt="Date Icon" />
+                        <span className={`${TEXT_NORMAL} ${TEXT_CENTERED_WITH_ICON}`}>{period}</span>
                     </div>
                     <ProjectDataSheet info={info}/>
                     <HorizontalLineSeparator/>

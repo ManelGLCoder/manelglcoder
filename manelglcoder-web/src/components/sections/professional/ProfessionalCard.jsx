@@ -6,7 +6,7 @@ import RoleIcon from '../../../assets/Icons/role_icon.svg'
 import TasksIcon from '../../../assets/Icons/tasks_icon.svg'
 import HorizontalLineSeparator from '../../HorizontalLineSeparator'
 
-import { TITLE_CARD, BG_CARD, BUTTON_STYLE, TEXT_SUB_TITLE, TEXT_NORMAL, TEXT_TITLE } from '../../../utilities/classname_utilities'
+import { TITLE_CARD, BG_CARD, BUTTON_STYLE, TEXT_SUB_TITLE, TEXT_NORMAL, ICON_SIZE, TEXT_CENTERED_WITH_ICON } from '../../../utilities/classname_utilities'
 
 const ProfessionalCard = ({info}) =>{
     const {title, logo, period, companyDes, rol, tasks, links, tools, gallery} = info
@@ -31,12 +31,12 @@ const ProfessionalCard = ({info}) =>{
                     <div className='flex gap-5'>
                         <section className={`flex-1 flex flex-col gap-2 mx-2`}>
                             <div className='relative -top-2 flex gap-1 items-center'>
-                                <img className='size-7' src={RoleIcon} alt="Role Icon" />
-                                <span className={TEXT_SUB_TITLE}>{rol}</span>
+                                <img className={ICON_SIZE} src={RoleIcon} alt="Role Icon" />
+                                <span className={`${TEXT_SUB_TITLE} ${TEXT_CENTERED_WITH_ICON}`}>{rol}</span>
                             </div>
                             <div className='flex gap-1 items-center'>
-                                <img className='size-7' src={TasksIcon} alt="Tasks Icon" />
-                                <span className={TEXT_SUB_TITLE}>TAREAS</span>
+                                <img className={ICON_SIZE} src={TasksIcon} alt="Tasks Icon" />
+                                <span className={`${TEXT_SUB_TITLE} ${TEXT_CENTERED_WITH_ICON}`}>TAREAS</span>
                             </div>
                             {
                                 tasks.map((task, i)=>{
@@ -49,22 +49,22 @@ const ProfessionalCard = ({info}) =>{
                                         return(
                                         <button key={i} className={BUTTON_STYLE}
                                         onClick={()=> window.open(link.url, "_blank")}>
-                                            <img className='size-7' src={LinkIcon} alt="Link Icon" />
-                                            <span className='text-center'>{link.text}</span>
+                                            <img className={ICON_SIZE} src={LinkIcon} alt="Link Icon" />
+                                            <span className={TEXT_CENTERED_WITH_ICON}>{link.text}</span>
                                         </button>
                                     )
                                     })
                                 }
                                 <button className={BUTTON_STYLE}>
-                                    <img className='size-7' src={GalleryIcon} alt="Gallery Icon" />
-                                    <span>GALERIA</span>
+                                    <img className={ICON_SIZE} src={GalleryIcon} alt="Gallery Icon" />
+                                    <span className={TEXT_CENTERED_WITH_ICON}>GALERIA</span>
                                 </button>
                             </div>
                         </section>
                         <div className='flex flex-col gap-2'>
                             <div className='flex gap-2 items-center'>
-                                <img className='size-7' src={ToolsIcon} alt="Tools Icon" />
-                                <span className={TEXT_SUB_TITLE}>Tools</span>
+                                <img className={ICON_SIZE} src={ToolsIcon} alt="Tools Icon" />
+                                <span className={`${TEXT_SUB_TITLE} ${TEXT_CENTERED_WITH_ICON}`}>Tools</span>
                             </div>
                             <div className='flex flex-wrap justify-between w-50 gap-3 mx-2'>
                                 {

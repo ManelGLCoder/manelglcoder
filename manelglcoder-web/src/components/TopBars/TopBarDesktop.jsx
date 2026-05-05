@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 
 import ClockIcon from '../../assets/Icons/clock_icon.svg'
 import DateIcon from '../../assets/Icons/date_icon.svg'
-import { TEXT_NORMAL } from "../../utilities/classname_utilities"
+import { TEXT_NORMAL, ICON_SIZE, TEXT_CENTERED_WITH_ICON } from "../../utilities/classname_utilities"
 
 const TopBarDesktop = () =>{
 
@@ -34,12 +34,12 @@ const TopBarDesktop = () =>{
     return(
         <section className={`flex min-w-svw max-h-10 px-5
         justify-between items-center text-red-dark-logo text-2xl bg-topbar`}>
-            <span className={`mx-2 ${TEXT_NORMAL}`}>ManelGLCoder</span>
-            <div className="flex gap-2 justify-center items-center font-pixel-number">
-                <img className="size-7" src={DateIcon} alt="Date Icon" />
-                <span>{currDate}</span>
-                <img className="size-7" src={ClockIcon} alt="Clock Icon" />
-                <span>{currTime}</span>
+            <span className={`mx-2 ${TEXT_NORMAL} ${TEXT_CENTERED_WITH_ICON}`}>ManelGLCoder</span>
+            <div className="flex gap-2 justify-center items-center font-basis">
+                <img className={ICON_SIZE} src={DateIcon} alt="Date Icon" />
+                <span className={TEXT_CENTERED_WITH_ICON}>{currDate}</span>
+                <img className={ICON_SIZE} src={ClockIcon} alt="Clock Icon" />
+                <span className={TEXT_CENTERED_WITH_ICON}>{currTime}</span>
             </div>
         </section>
     )
