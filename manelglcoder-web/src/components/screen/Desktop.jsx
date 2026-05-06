@@ -35,9 +35,9 @@ const Desktop = () =>{
 
             {/* <FolderWindow title={'PROFESIONAL'} content={PROFESSIONAL_DATA} category={'professional'}/> */}
             <FolderWindow title={'PROYECTOS'} content={PROJECTS_DATA} category={'project'}/>
-            {/* <AboutMeWindow/> */}
+            <AboutMeWindow/>
             {/* <ContactMeWindow/> */}
-            <GalleryWindow title={'GALERÍA'} content={TMP_GALLERY_CONTENT}/>
+            {/* <GalleryWindow title={'GALERÍA'} content={TMP_GALLERY_CONTENT}/> */}
         </div>
     )
 }

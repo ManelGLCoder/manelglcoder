@@ -1,79 +1,26 @@
-import LinkIcon from '../../../assets/Icons/link_icon.svg'
-import GalleryIcon from '../../../assets/Icons/gallery_icon.svg'
-import ToolsIcon from '../../../assets/Icons/tools_icon.svg'
-import DateIcon from '../../../assets/Icons/hover_date_icon.svg'
-import RoleIcon from '../../../assets/Icons/role_icon.svg'
-import TasksIcon from '../../../assets/Icons/tasks_icon.svg'
+import Company from './Company'
 import HorizontalLineSeparator from '../../HorizontalLineSeparator'
+import RolAndTasks from '../RolAndTasks'
+import LinksAndGallery from '../LinksAndGallery'
+import Tools from '../Tools'
 
-import { TITLE_CARD, BG_CARD, BUTTON_STYLE, TEXT_SUB_TITLE, TEXT_NORMAL, ICON_SIZE, TEXT_CENTERED_WITH_ICON } from '../../../utilities/classname_utilities'
+import { TITLE_CARD, BG_CARD } from '../../../utilities/classname_utilities'
 
 const ProfessionalCard = ({info}) =>{
     const {title, logo, period, companyDes, rol, tasks, links, tools, gallery} = info
+
     return(
         <div className={`flex flex-col mx-4 my-5 gap-1 ${BG_CARD}`}>
             <span className={TITLE_CARD}>{title}</span>
                 <div className="flex flex-1 flex-col mx-2 gap-2">
-                    <div className='flex gap-2'>
-                        <div className='w-70 m-2'>
-                            <img className='p-1 object-cover' src={logo} alt="Logo Empresa"/>
-                        </div>
-                        <div className='flex flex-col'>
-                            <div className='flex items-center gap-2'>
-                                <img className='size-5' src={DateIcon} alt="Date Icon" />
-                                <span className={TEXT_SUB_TITLE}>{period}</span>
-                            </div>
-                            <p className={TEXT_NORMAL}>{companyDes}</p>
-                        </div>
-                    </div>
-                    
+                    <Company logo={logo} period={period} companyDes={companyDes}/>
                     <HorizontalLineSeparator/>
                     <div className='flex gap-5'>
                         <section className={`flex-1 flex flex-col gap-2 mx-2`}>
-                            <div className='relative -top-2 flex gap-1 items-center'>
-                                <img className={ICON_SIZE} src={RoleIcon} alt="Role Icon" />
-                                <span className={`${TEXT_SUB_TITLE} ${TEXT_CENTERED_WITH_ICON}`}>{rol}</span>
-                            </div>
-                            <div className='flex gap-1 items-center'>
-                                <img className={ICON_SIZE} src={TasksIcon} alt="Tasks Icon" />
-                                <span className={`${TEXT_SUB_TITLE} ${TEXT_CENTERED_WITH_ICON}`}>TAREAS</span>
-                            </div>
-                            {
-                                tasks.map((task, i)=>{
-                                    return(<span className={`pl-6 ${TEXT_NORMAL}`} key={i}>{task}</span>)
-                                })
-                            }
-                            <div className='flex gap-2 justify-start items-center'>
-                                {
-                                    links.map((link, i)=>{
-                                        return(
-                                        <button key={i} className={BUTTON_STYLE}
-                                        onClick={()=> window.open(link.url, "_blank")}>
-                                            <img className={ICON_SIZE} src={LinkIcon} alt="Link Icon" />
-                                            <span className={TEXT_CENTERED_WITH_ICON}>{link.text}</span>
-                                        </button>
-                                    )
-                                    })
-                                }
-                                <button className={BUTTON_STYLE}>
-                                    <img className={ICON_SIZE} src={GalleryIcon} alt="Gallery Icon" />
-                                    <span className={TEXT_CENTERED_WITH_ICON}>GALERIA</span>
-                                </button>
-                            </div>
+                            <RolAndTasks rol={rol} tasks={tasks}/>
+                            <LinksAndGallery links={links} gallery={gallery}/>
                         </section>
-                        <div className='flex flex-col gap-2'>
-                            <div className='flex gap-2 items-center'>
-                                <img className={ICON_SIZE} src={ToolsIcon} alt="Tools Icon" />
-                                <span className={`${TEXT_SUB_TITLE} ${TEXT_CENTERED_WITH_ICON}`}>Tools</span>
-                            </div>
-                            <div className='flex flex-wrap justify-between w-50 gap-3 mx-2'>
-                                {
-                                    tools.map((tool, i)=>{
-                                        return(<img key={i} className='size-8' src={tool.src} alt={tool.alt}/>)
-                                    })
-                                }
-                            </div>
-                        </div>
+                        <Tools tools={tools}/>
                     </div>
                 </div>
         </div>
