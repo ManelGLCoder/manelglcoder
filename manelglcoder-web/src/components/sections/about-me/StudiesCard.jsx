@@ -3,7 +3,8 @@ import { STUDIES_DATA } from "../../../dto/about_me_dto"
 import DateIcon from "../../../assets/Icons/hover_date_icon.svg"
 import CompanyIcon from "../../../assets/Icons/company_icon.svg"
 import CertificateIcon from "../../../assets/Icons/certificate_icon.svg"
-import { TITLE_CARD, BG_CARD, TEXT_NORMAL, TEXT_CENTERED_WITH_ICON, ICON_SIZE } from "../../../utilities/classname_utilities"
+import { TITLE_CARD, BG_CARD, TEXT_NORMAL } from "../../../utilities/classname_utilities"
+import IconWithTextCentered from "../../generic/IconWithTextCentered"
 
 const StudiesCard = () =>{
     return(
@@ -12,6 +13,10 @@ const StudiesCard = () =>{
             <ul className={`flex flex-col mx-2 gap-2 ${TEXT_NORMAL}`}>
                 {
                     STUDIES_DATA.map((study,i)=>{
+                        const periodIcon = { src: DateIcon, alt: 'Date Icon'}
+                        const periodText = { text: study.period}
+                        const comapnyIcon = { src: CompanyIcon, alt: 'Company Icon'}
+                        const companyText = { text: study.where}
                         return(
                             <li className='relative -top-4 flex flex-col my-2' key={i}>
                                 <div className="flex gap-1 items-start">
@@ -24,14 +29,8 @@ const StudiesCard = () =>{
                                     </span>
                                 </div>
                                 <div className="pl-3 flex justify-start gap-3">
-                                    <div className="flex gap-2 items-center">
-                                        <img className={ICON_SIZE} src={DateIcon} alt="Date Icon" />
-                                        <span className={TEXT_CENTERED_WITH_ICON}>{study.period}</span>
-                                    </div>
-                                    <div className="flex gap-2 items-center">
-                                        <img className={ICON_SIZE} src={CompanyIcon} alt="Company Icon" />
-                                        <span className={TEXT_CENTERED_WITH_ICON}>{study.where}</span>
-                                    </div>
+                                    <IconWithTextCentered iconData={periodIcon} textData={periodText}/>
+                                    <IconWithTextCentered iconData={comapnyIcon} textData={companyText}/>
                                 </div>
                             </li>
                         )

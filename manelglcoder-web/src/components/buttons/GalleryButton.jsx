@@ -1,5 +1,5 @@
 import GalleryIcon from '../../assets/Icons/gallery_icon.svg'
-import { BUTTON_STYLE, ICON_SIZE, TEXT_CENTERED_WITH_ICON } from '../../utilities/classname_utilities'
+import { BUTTON_STYLE } from '../../utilities/classname_utilities'
 import IconSized from '../generic/IconSized'
 import TextCenteredWithIcon from '../generic/TextCenteredWidthIcon'
 
