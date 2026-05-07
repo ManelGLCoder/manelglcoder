@@ -1,4 +1,4 @@
-export const TITLE_CARD = `relative -top-4  left-2 w-fit p-1 h-fit
+export const TITLE_CARD = `relative -top-4  left-2 w-fit px-4 py-1 h-fit
                             bg-card border-2 border-color_line
                             text-2xl text-center font-basis font-normal text-color_bold`
 export const BG_CARD = `bg-card border-2 border-color_line`
