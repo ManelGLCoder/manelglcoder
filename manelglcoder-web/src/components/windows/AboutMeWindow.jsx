@@ -10,7 +10,7 @@ const AboutMeWindow = () =>{
     return(
         <section 
         className={`absolute left-10 top-15 
-        flex flex-col w-2/4 h-2/3 
+        flex flex-col w-6/10 h-2/3 
         border-2 border-red-dark-logo bg-window-bg`}>
             <TopBarWindow title='SOBRE MI'/>
             <div className='overflow-y-auto flex flex-col my-1 gap-4'>

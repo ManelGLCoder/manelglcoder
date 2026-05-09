@@ -21,7 +21,7 @@ const CODE_BCN_FIRST_WARRIOR = {
     period: 'Sep 2024 - Feb 2025',
     platform: 'GameJolt / Itch.io',
     gender: `Arcade Shoot 'Em Up 2.5D`,
-    developer:'IgnisGamesBcn (Antigua marca profesional)',
+    developer: null,
     players:'1',
     duration:'15 min',
     rol: 'Solo Developer',

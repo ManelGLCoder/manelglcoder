@@ -10,7 +10,7 @@ const StudiesCard = () =>{
     return(
         <div className={`flex-1 flex flex-col gap-1 ${BG_CARD}`}>
             <span className={`text-center ${TITLE_CARD}`}>Estudios / Aprendizaje</span>
-            <ul className={`flex flex-col mx-2 gap-2 ${TEXT_NORMAL}`}>
+            <ul className={`flex flex-col mx-2 gap-7 ${TEXT_NORMAL}`}>
                 {
                     STUDIES_DATA.map((study,i)=>{
                         const periodIcon = { src: DateIcon, alt: 'Date Icon'}
@@ -19,19 +19,18 @@ const StudiesCard = () =>{
                         const companyText = { text: study.where}
                         return(
                             <li className='relative -top-4 flex flex-col my-2' key={i}>
-                                <div className="flex gap-1 items-start">
-                                    {
-                                        study.certificated ? <img className="size-8" src={CertificateIcon} alt="Certificate Icon" /> : null
-                                    }
-                                    <span className="flex gap-1">
+                                <div className="flex gap-2 items-center justify-between">
+                                    <div className="flex gap-1">
+                                        {
+                                            study.certificated ? <img className="size-8" src={CertificateIcon} alt="Certificate Icon" /> : null
+                                        
+                                        }
                                         <span className="text-color_bold">{study.category}</span>
-                                        {study.title}
-                                    </span>
-                                </div>
-                                <div className="pl-3 flex justify-start gap-3">
+                                    </div>
                                     <IconWithTextCentered iconData={periodIcon} textData={periodText}/>
                                     <IconWithTextCentered iconData={comapnyIcon} textData={companyText}/>
                                 </div>
+                                <span className="flex gap-1">{study.title}</span>
                             </li>
                         )
                     })

@@ -26,10 +26,13 @@ const ProjectDataSheet = ({info}) =>{
                 <IconSized src={ClockIcon} alt={'Clock Icon'}/>
                 <span className={`${TEXT_SUB_TITLE} ${TEXT_CENTERED_WITH_ICON}`}>Duración: <span className={`${TEXT_NORMAL} ${TEXT_CENTERED_WITH_ICON}`}>{duration}</span></span>
             </div>
-            <div className="flex gap-1 items-center">
-                <IconSized src={DeveloperIcon} alt={'Developer Icon'}/>
-                <span className={`${TEXT_SUB_TITLE} ${TEXT_CENTERED_WITH_ICON}`}>Desarrollador: <span className={`${TEXT_NORMAL} ${TEXT_CENTERED_WITH_ICON}`}>{developer}</span></span>
-            </div>
+            {
+                developer &&
+                <div className="flex gap-1 items-center">
+                    <IconSized src={DeveloperIcon} alt={'Developer Icon'}/>
+                    <span className={`${TEXT_SUB_TITLE} ${TEXT_CENTERED_WITH_ICON}`}>Desarrollador: <span className={`${TEXT_NORMAL} ${TEXT_CENTERED_WITH_ICON}`}>{developer}</span></span>
+                </div>
+            }
         </section>
     )
 }
