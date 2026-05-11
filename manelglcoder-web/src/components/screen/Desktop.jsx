@@ -1,8 +1,8 @@
-import ProfessionalButton from "../sections/professional/ProfesionalButton"
-import LatestProjectsButton from "../sections/latest-projects/LatestProjectsButton"
+import ProfessionalButton from "../buttons/ProfesionalButton"
+import LatestProjectsButton from "../buttons/LatestProjectsButton"
 import AboutMeButton from "../buttons/AboutMeButton"
-import ContactButton from "../sections/contact-me/ContactButton"
-import OldestProjectButton from "../sections/old-projects/OldestProjectButton"
+import ContactButton from "../buttons/ContactButton"
+import OldestProjectButton from "../buttons/OldestProjectButton"
 
 import GalleryWindow from "../windows/GalleryWindow"
 import FolderWindow from "../windows/FolderWindow"
@@ -27,14 +27,14 @@ const TMP_GALLERY_CONTENT = [
 const Desktop = () =>{
     return(
         <div className={`flex-1 grid grid-cols-12 grid-rows-8 `}>
-            <ProfessionalButton/>
-            <LatestProjectsButton/>
-            <AboutMeButton/>
-            <ContactButton/>
-            <OldestProjectButton name={'Proyectos Antiguos'}/>
+            <ProfessionalButton position={'row-start-1 col-start-1'}/>
+            <LatestProjectsButton position={'row-start-2 col-start-1'}/>
+            <AboutMeButton position={'row-start-3 col-start-1'}/>
+            <ContactButton position={'row-start-4 col-start-1'}/>
+            <OldestProjectButton name={'Proyectos Antiguos'} position={'row-start-8 col-start-1'}/>
 
-            {/* <FolderWindow title={'PROFESIONAL'} content={PROFESSIONAL_DATA} category={'professional'}/> */}
-            <FolderWindow title={'PROYECTOS'} content={PROJECTS_DATA} category={'project'}/>
+            <FolderWindow title={'PROFESIONAL'} content={PROFESSIONAL_DATA} category={'professional'}/>
+            {/* <FolderWindow title={'PROYECTOS'} content={PROJECTS_DATA} category={'project'}/> */}
             <AboutMeWindow/>
             {/* <ContactMeWindow/> */}
             {/* <GalleryWindow title={'GALERÍA'} content={TMP_GALLERY_CONTENT}/> */}

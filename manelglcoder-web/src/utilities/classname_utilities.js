@@ -1,4 +1,4 @@
-export const TITLE_CARD = `relative -top-4  left-4 w-fit px-4 py-1 h-fit
+export const TITLE_CARD = `relative -top-4 left-4 px-4 py-1 w-fit h-fit
                             bg-card border-2 border-color_line
                             text-2xl text-center font-basis font-normal text-color_bold`
 export const BG_CARD = `bg-card border-2 border-color_line`
@@ -16,3 +16,7 @@ export const TEXT_WINDOW = 'font-basis font-normal text-color_semibold'
 export const TEXT_CENTERED_WITH_ICON ='relative top-0.5'
 export const ICON_SIZE = 'size-6'
 export const DESKTOP_BUTTON_CLASS = 'flex justify-center items-center'
+
+export const MOBILE_TITLE_CARD = `relative left-2 -top-4 px-2 py-1 w-xs h-fit
+                            bg-card border-2 border-color_line
+                            text-2xl text-center font-basis font-normal text-color_bold`

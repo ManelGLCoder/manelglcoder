@@ -1,11 +1,11 @@
 import ProfessionalCard from '../sections/professional/ProfessionalCard';
 import ProjectCard from '../sections/latest-projects/ProjectCard';
-import TopBarWindow from '../TopBars/TopBarWindow';
+import TopBarWindow from '../../TopBars/TopBarWindow';
 
 const FolderWindow = ({title,content, category}) =>{
     return(
-        <section className={`absolute right-10 top-15 flex flex-col w-2/5 h-2/3
-                            border-2 border-red-dark-logo bg-window-bg`}>
+        <section className={`absolute top-8.5 flex flex-col w-full h-full
+                    border-2 border-red-dark-logo bg-window-bg`}>
                 <TopBarWindow title={title}/>
                 <div className='overflow-y-auto flex flex-col my-1 gap-2'>
                     {
