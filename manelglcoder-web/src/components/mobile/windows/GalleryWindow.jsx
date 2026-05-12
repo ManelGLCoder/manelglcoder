@@ -13,11 +13,11 @@ const GalleryWindow = ({title,content}) =>{
         setIndex(prevIndex < 0? content.length - 1 : prevIndex)
     }
     return(
-        <section className={`absolute top-11 flex flex-col w-full h-4/9
+        <section className={`absolute top-11 flex flex-col w-full h-fit
                             border-2 border-red-dark-logo bg-window-bg`}>
                 <TopBarWindow title={title}/>
                 <img className='p-1 object-cover' src={content[index].src} alt={content[index].alt}/>
-                <div className={`relative bottom-4.5 flex justify-between items-center`}>
+                <div className={`flex justify-between items-center`}>
                     <button className={`flex-1 flex justify-center ${BUTTON_STYLE} max-w-full`} onClick={prevImg}>
                         <img className='size-10' src={PrevIcon} alt="Prev Icon" />
                     </button>
