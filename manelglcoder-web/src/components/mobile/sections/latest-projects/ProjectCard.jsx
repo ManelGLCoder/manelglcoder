@@ -25,14 +25,16 @@ const ProjectCard = ({info}) =>{
             <span className={TITLE_CARD}>{category}</span>
             <section className="flex flex-1 flex-col mx-4 gap-2">
                     <ProjectNameAndPeriod title={title} period={period}/>
-                    <ProjectSplashScreen imgInfo={img}/>
+                    <div className='flex-1 flex sm:justify-center sm:items-center sm:max-h-1/5'>
+                        <ProjectSplashScreen imgInfo={img}/>
+                    </div>
                     <ProjectDataSheet info={info}/>
                     <HorizontalLineSeparator/>
                     <RolAndTasks rol={rol} tasks={tasks}/>
                     <Tools tools={tools}/>
             </section>
             
-            <div className='flex gap-1 justify-start items-center mx-4'>
+            <div className='flex gap-1 justify-start sm:justify-center items-center mx-4'>
                 <LinksAndGallery links={links} gallery={gallery}/>
             </div>
             <ShowMoreInfoButton click={altShowMoreInfo} showMoreInfo={showMoreInfo}/>

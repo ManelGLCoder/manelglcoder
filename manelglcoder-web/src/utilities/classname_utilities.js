@@ -20,6 +20,6 @@ export const DESKTOP_BUTTON_CLASS = 'flex justify-center items-center'
 export const MOBILE_TITLE_CARD = `relative left-2 -top-4 px-2 py-1 w-xs h-fit
                             bg-card border-2 border-color_line
                             text-2xl text-center font-basis font-normal text-color_bold`
-export const MOBILE_WINDOW_CLASS = `absolute top-11 flex flex-col w-full h-11/12
+export const MOBILE_WINDOW_CLASS = `absolute top-11 flex flex-col w-full h-11/12 sm:h-10/12
                                     border-2 border-red-dark-logo bg-window-bg`
 export const MOBILE_CARD_CLASS = 'flex flex-col my-4 gap-1'

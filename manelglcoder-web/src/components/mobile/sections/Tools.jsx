@@ -8,7 +8,7 @@ const Tools = ({tools}) =>{
     return(
         <div className="flex flex-col gap-1 m-2">
             <IconWithTextCentered iconData={toolsIcon} textData={toolsText}/>
-            <div className='flex flex-wrap justify-between max-w-60 gap-5 m-2'>
+            <div className='flex flex-wrap justify-between gap-5 m-2'>
                 {
                     tools.map((tool, i)=>{
                         return(<img key={i} className='size-8' src={tool.src} alt={tool.alt}/>)

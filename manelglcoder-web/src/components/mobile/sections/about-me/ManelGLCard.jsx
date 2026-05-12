@@ -9,7 +9,7 @@ const ManelGLCard = () =>{
         <div className={`${MOBILE_CARD_CLASS} ${BG_CARD}`}>
             <span className={TITLE_CARD}>MANEL GISBERT LÓPEZ</span>
             <section className="relative -top-4 flex flex-col justify-center items-center">
-                <img className='p-1 object-cover w-3/5' src={TmpICon} alt="Manel Photo"/>
+                <img className='p-1 sm:p-10 object-cover w-3/5' src={TmpICon} alt="Manel Photo"/>
                 <div className="flex flex-1 flex-col gap-2 mx-2">
                     <p className={`px-2 ${TEXT_NORMAL}`}>Me considero una persona <span className='text-color_bold'> extrovertida</span>
                         ,
