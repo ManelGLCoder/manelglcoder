@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import TopBarWindow from '../TopBars/TopBarWindow';
+import TopBarWindow from '../../TopBars/TopBarWindow';
 
-import PrevIcon from '../../assets/Icons/prev_icon.svg'
-import NextIcon from '../../assets/Icons/next_icon.svg'
-import { BUTTON_STYLE, BG_CARD, TEXT_TITLE } from '../../utilities/classname_utilities';
+import PrevIcon from '../../../assets/Icons/prev_icon.svg'
+import NextIcon from '../../../assets/Icons/next_icon.svg'
+import { BUTTON_STYLE, BG_CARD, TEXT_TITLE } from '../../../utilities/classname_utilities';
 
 const GalleryWindow = ({title,content}) =>{
     const [index, setIndex] = useState(0)
@@ -13,11 +13,11 @@ const GalleryWindow = ({title,content}) =>{
         setIndex(prevIndex < 0? content.length - 1 : prevIndex)
     }
     return(
-        <section className={`absolute left-10 top-15 flex flex-col w-1/3 h-2/4
-        border-2 border-red-dark-logo bg-window-bg`}>
+        <section className={`absolute top-11 flex flex-col w-full h-4/9
+                            border-2 border-red-dark-logo bg-window-bg`}>
                 <TopBarWindow title={title}/>
                 <img className='p-1 object-cover' src={content[index].src} alt={content[index].alt}/>
-                <div className={`relative -bottom-1.5 flex justify-between items-center`}>
+                <div className={`relative bottom-4.5 flex justify-between items-center`}>
                     <button className={`flex-1 flex justify-center ${BUTTON_STYLE} max-w-full`} onClick={prevImg}>
                         <img className='size-10' src={PrevIcon} alt="Prev Icon" />
                     </button>
