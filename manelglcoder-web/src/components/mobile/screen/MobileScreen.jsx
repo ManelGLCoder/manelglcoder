@@ -12,7 +12,6 @@ const MobileScreen = ({orientation}) =>{
                 {
                     orientation == 'portrait' ? <Portrait/> : <Landscape/>
                 }
-                {/* <Desktop/> */}
             </section>
         </>
     )

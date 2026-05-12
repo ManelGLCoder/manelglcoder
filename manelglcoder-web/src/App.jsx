@@ -8,7 +8,7 @@ function App() {
   const [orientation, setOrientation] = useState('')
   const handleWindowResize = ()=> {
       const resolution = window.innerWidth;
-      const isMobile = resolution >= 320 && resolution <= 480;
+      const isMobile = resolution >= 320 && resolution <= 767;
       const isTablet = resolution >= 768 && resolution <= 1024;
       const isDesktop = !isMobile && !isTablet;
       setDevice(
@@ -16,8 +16,6 @@ function App() {
       )
       const orientationDevice = screen.orientation.type.split('-')[0]
       setOrientation(orientationDevice)
-      console.log(orientationDevice)
-      
   }
   useEffect(() => {
       handleWindowResize()
