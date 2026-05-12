@@ -1,27 +1,20 @@
-import TopBarWindow from "../TopBars/TopBarWindow"
+import TopBarWindow from "../../TopBars/TopBarWindow"
 import ManelGLCard from "../sections/about-me/ManelGLCard"
 import ExperienceCard from "../sections/about-me/ExperienceCard"
 import StudiesCard from "../sections/about-me/StudiesCard"
 import SoftSkills from "../sections/about-me/SoftSkills"
 import Skills from "../sections/about-me/Skills"
+import { MOBILE_WINDOW_CLASS } from "../../../utilities/classname_utilities"
 
 const AboutMeWindow = () =>{
-
     return(
-        <section 
-        className={`absolute left-10 top-15 
-        flex flex-col w-6/10 h-2/3 
-        border-2 border-red-dark-logo bg-window-bg`}>
+        <section className={MOBILE_WINDOW_CLASS}>
             <TopBarWindow title='SOBRE MI'/>
-            <div className='overflow-y-auto flex flex-col my-1 gap-4'>
+            <div className='overflow-y-auto flex flex-col mx-4 my-1 gap-4'>
                 <ManelGLCard/>
-                <div className="flex justify-between gap-4 mx-4">
-                    <div className="flex flex-col gap-6 w-3/5">
-                        <ExperienceCard/>
-                        <SoftSkills/>
-                    </div>
-                    <StudiesCard/>
-                </div>
+                <ExperienceCard/>
+                <SoftSkills/>
+                <StudiesCard/>
                 <Skills/>
             </div>
         </section>

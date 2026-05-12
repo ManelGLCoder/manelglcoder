@@ -5,10 +5,10 @@ import ContactButton from "../buttons/ContactButton"
 import OldestProjectButton from "../buttons/OldestProjectButton"
 
 import FolderWindow from "../windows/FolderWindow"
-// import GalleryWindow from "../../windows/GalleryWindow"
+// import GalleryWindow from "../windows/GalleryWindow"
 
-// import AboutMeWindow from "../../windows/AboutMeWindow"
-// import ContactMeWindow from "../../windows/ContactMeWindow"
+import AboutMeWindow from "../windows/AboutMeWindow"
+// import ContactMeWindow from "../windows/ContactMeWindow"
 import PROFESSIONAL_DATA from "../../../dto/professional_dto"
 import PROJECTS_DATA from "../../../dto/projects_dto"
 
@@ -36,7 +36,7 @@ const Portrait = () =>{
 
             {/* <FolderWindow title={'PROFESIONAL'} content={PROFESSIONAL_DATA} category={'professional'}/> */}
             {/* <FolderWindow title={'PROYECTOS'} content={PROJECTS_DATA} category={'project'}/> */}
-            {/* <AboutMeWindow/> */}
+            <AboutMeWindow/>
             {/* <ContactMeWindow/> */}
             {/* <GalleryWindow title={'GALERÍA'} content={TMP_GALLERY_CONTENT}/> */}
         </div>

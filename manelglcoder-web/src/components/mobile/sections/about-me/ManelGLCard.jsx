@@ -1,15 +1,15 @@
-import TmpICon from '../../../../public/ManelGLCoder.svg'
+import TmpICon from '../../../../../public/ManelGLCoder.svg'
 
 import SoftSkills from './SoftSkills'
 import Skills from './Skills'
-import { TITLE_CARD, BG_CARD, TEXT_SUB_TITLE, TEXT_NORMAL } from '../../../utilities/classname_utilities'
+import { TITLE_CARD, BG_CARD, TEXT_SUB_TITLE, TEXT_NORMAL, MOBILE_CARD_CLASS } from '../../../../utilities/classname_utilities'
 
 const ManelGLCard = () =>{
     return(
-        <div className={`flex flex-col mx-4 my-4 gap-1 ${BG_CARD}`}>
+        <div className={`${MOBILE_CARD_CLASS} ${BG_CARD}`}>
             <span className={TITLE_CARD}>MANEL GISBERT LÓPEZ</span>
-            <section className="relative -top-4 flex justify-center items-center">
-                <img className='p-1 object-cover w-1/5' src={TmpICon} alt="Manel Photo"/>
+            <section className="relative -top-4 flex flex-col justify-center items-center">
+                <img className='p-1 object-cover w-3/5' src={TmpICon} alt="Manel Photo"/>
                 <div className="flex flex-1 flex-col gap-2 mx-2">
                     <p className={`px-2 ${TEXT_NORMAL}`}>Me considero una persona <span className='text-color_bold'> extrovertida</span>
                         ,

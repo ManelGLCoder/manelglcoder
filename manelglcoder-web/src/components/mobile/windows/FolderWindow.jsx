@@ -1,11 +1,11 @@
 import ProfessionalCard from '../sections/professional/ProfessionalCard';
 import ProjectCard from '../sections/latest-projects/ProjectCard';
 import TopBarWindow from '../../TopBars/TopBarWindow';
+import { MOBILE_WINDOW_CLASS } from '../../../utilities/classname_utilities';
 
 const FolderWindow = ({title,content, category}) =>{
     return(
-        <section className={`absolute top-8.5 flex flex-col w-full h-full
-                    border-2 border-red-dark-logo bg-window-bg`}>
+        <section className={MOBILE_WINDOW_CLASS}>
                 <TopBarWindow title={title}/>
                 <div className='overflow-y-auto flex flex-col my-1 gap-2'>
                     {
