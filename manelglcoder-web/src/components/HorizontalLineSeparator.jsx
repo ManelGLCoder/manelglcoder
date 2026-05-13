@@ -1,0 +1,10 @@
+
+const HorizontalLineSeparator = ({color='border-red-light-logo'}) =>{
+    return(
+        <div className="relative flex-1 mx-2 py-4">
+            <div className={`w-full border-b ${color}`}></div>
+        </div>
+    )
+}
+
+export default HorizontalLineSeparator
