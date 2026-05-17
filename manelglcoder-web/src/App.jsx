@@ -2,6 +2,7 @@ import './App.css'
 import { useState, useEffect } from 'react'
 import PCScreen from './components/screen/PCScreen'
 import MobileScreen from './components/mobile/screen/MobileScreen'
+import { WindowProvider } from './contexts/WindowsContext'
 
 function App() {
   const [device, setDevice] = useState('')
@@ -25,10 +26,11 @@ function App() {
   return (
     <div className='flex h-dvh w-dvw'>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      {
-        device == 'desktop'? <PCScreen/> : <MobileScreen orientation={orientation}/>
-      }
-      
+      <WindowProvider>
+        {
+          device == 'desktop'? <PCScreen/> : <MobileScreen orientation={orientation}/>
+        }
+      </WindowProvider>
     </div>
   )
 }
