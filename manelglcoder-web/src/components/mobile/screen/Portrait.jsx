@@ -15,21 +15,11 @@ import PROJECTS_DATA from "../../../dto/projects_dto"
 import { useContext } from "react"
 import { WindowContext } from "../../../contexts/WindowsContext"
 import { PROFESSIONAL_KEY, LAST_PROJECTS_KEY, ABOUT_ME_KEY, CONCTACT_ME_KEY, OLD_PROJECTS_KEY } from "../../../dto/window_keys_dto"
-
-// //TODO: Eliminar tras acabar de diseñar la galería
-// import test_gallery_1 from '../../../assets/code-bcn-first-warrior/gallery_1.avif'
-// import cbfw_gallery_2 from '../../../assets/code-bcn-first-warrior/gallery_2.avif'
-// import cbfw_gallery_3 from '../../../assets/code-bcn-first-warrior/gallery_3.avif'
-// import cbfw_gallery_4 from '../../../assets/code-bcn-first-warrior/gallery_4.avif'
-// const TMP_GALLERY_CONTENT = [
-//         {src:test_gallery_1, alt:'CODE BCN img 1'},
-//         {src:cbfw_gallery_2, alt:'CODE BCN img 2'},
-//         {src:cbfw_gallery_3, alt:'CODE BCN img 3'},
-//         {src:cbfw_gallery_4, alt:'CODE BCN img 4'},
-//     ]
+import { GalleryContext } from "../../../contexts/GalleryContext"
 
 const Portrait = () =>{
     const {currWindow} = useContext(WindowContext)
+    const {visible} = useContext(GalleryContext)
     const showWindow = (windowKey) =>{
         switch (windowKey) {
             case PROFESSIONAL_KEY:
@@ -56,7 +46,9 @@ const Portrait = () =>{
             {
                 showWindow(currWindow)
             }
-            {/* <GalleryWindow title={'GALERÍA'} content={TMP_GALLERY_CONTENT}/> */}
+            {
+                visible ? <GalleryWindow title={'GALERÍA'}/> : ''
+            }
         </div>
     )
 }
