@@ -22,7 +22,7 @@ const ContactMeWindow = () =>{
         setMessageData(data)
     }
     return(
-        <section className={`absolute left-10 top-15 flex flex-col
+        <section className={`absolute left-100 top-15 flex flex-col
         h-4/5 w-xl
         border-2 border-red-dark-logo bg-window-bg`}>
                 <TopBarWindow title='CONTACTA CONMIGO'/>
