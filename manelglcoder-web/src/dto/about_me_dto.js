@@ -46,6 +46,8 @@ export const EXPERIENCE_DATA = [
 ]
 
 export const STUDIES_DATA = [
+    {where: 'mouredev pro', period: 'Oct 2025', category:'Curso', title: 'JavaScript Intermedio', certificated:true},
+    {where: 'mouredev pro', period: 'Sep 2025', category:'Curso', title: 'JavaScript desde cero', certificated:true},
     {where: 'PowerUps', period: '2023', category:'Curso', title: 'Solid Y Clean Code Para Videojuegos', certificated:true},
     {where: 'Udemy', period: '2021', category:'Curso', title: 'Programar Blueprints en Unreal Engine De 0 A Profesional', certificated:true},
     {where: 'Udemy', period: '2021 - 2022', category:'Curso', title: 'Máster En Programación De Videojuegos Con Unity 2020 Y C#', certificated:true},

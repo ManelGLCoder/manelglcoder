@@ -11,6 +11,7 @@ import AboutMeWindow from "../windows/AboutMeWindow"
 import ContactMeWindow from "../windows/ContactMeWindow"
 import PROFESSIONAL_DATA from "../../dto/professional_dto"
 import PROJECTS_DATA from "../../dto/projects_dto"
+import OLD_PROJECTS_DATA from "../../dto/old_projects_dto"
 import { PROFESSIONAL_KEY, LAST_PROJECTS_KEY, ABOUT_ME_KEY, CONCTACT_ME_KEY, OLD_PROJECTS_KEY } from "../../dto/window_keys_dto"
 import { useContext } from "react"
 import { GalleryContext } from "../../contexts/GalleryContext"
@@ -29,7 +30,7 @@ const Desktop = () =>{
             case CONCTACT_ME_KEY:
                 return <ContactMeWindow/>
             case OLD_PROJECTS_KEY:
-                return <FolderWindow title={'PROYECTOS ANTIGUOS'} content={PROJECTS_DATA} category={'project'}/>
+                return <FolderWindow title={'PROYECTOS ANTIGUOS'} content={OLD_PROJECTS_DATA} category={'project'}/>
             default:
                 return ''
         }

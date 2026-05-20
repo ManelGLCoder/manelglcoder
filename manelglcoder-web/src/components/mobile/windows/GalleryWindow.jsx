@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import TopBarGallery from '../../TopBars/TopBarGallery'
 
 import PrevIcon from '../../../assets/Icons/prev_icon.svg'
@@ -7,8 +7,7 @@ import { BUTTON_STYLE, BG_CARD, TEXT_TITLE } from '../../../utilities/classname_
 import { GalleryContext } from '../../../contexts/GalleryContext';
 
 const GalleryWindow = ({title}) =>{
-    const {content} = useContext(GalleryContext)
-    const [index, setIndex] = useState(0)
+    const {content, index, setIndex} = useContext(GalleryContext)
     const nextImg = () =>{setIndex((index + 1)% content.length)}
     const prevImg = () =>{
         const prevIndex = index - 1

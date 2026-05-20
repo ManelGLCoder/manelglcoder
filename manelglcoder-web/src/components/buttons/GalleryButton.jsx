@@ -7,8 +7,9 @@ import GalleryWindow from '../windows/GalleryWindow'
 import { GalleryContext } from '../../contexts/GalleryContext'
 
 const GalleryButton = ({galleryInfo}) =>{
-    const {setVisible, setContent} = useContext(GalleryContext)
+    const {setVisible, setContent, setIndex} = useContext(GalleryContext)
     const handleGallery = () =>{
+        setIndex(0)
         setVisible(true)
         setContent(galleryInfo)
     }

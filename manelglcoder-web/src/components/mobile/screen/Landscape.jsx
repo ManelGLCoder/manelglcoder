@@ -11,6 +11,7 @@ import AboutMeWindow from "../windows/AboutMeWindow"
 import ContactMeWindow from "../windows/ContactMeWindow"
 import PROFESSIONAL_DATA from "../../../dto/professional_dto"
 import PROJECTS_DATA from "../../../dto/projects_dto"
+import OLD_PROJECTS_DATA from "../../../dto/old_projects_dto"
 
 import { useContext } from "react"
 import { WindowContext } from "../../../contexts/WindowsContext"
@@ -31,7 +32,7 @@ const Landscape = () =>{
             case CONCTACT_ME_KEY:
                 return <ContactMeWindow/>
             case OLD_PROJECTS_KEY:
-                return <FolderWindow title={'PROYECTOS ANTIGUOS'} content={PROJECTS_DATA} category={'project'}/>
+                return <FolderWindow title={'PROYECTOS ANTIGUOS'} content={OLD_PROJECTS_DATA} category={'project'}/>
             default:
                 return ''
         }
