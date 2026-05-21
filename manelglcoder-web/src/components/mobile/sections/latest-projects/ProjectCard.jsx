@@ -23,9 +23,9 @@ const ProjectCard = ({info}) =>{
     return(
         <div className={`flex flex-col mx-4 my-5 gap-1 ${BG_CARD}`}>
             <span className={TITLE_CARD}>{category}</span>
-            <section className="flex flex-1 flex-col mx-4 gap-2">
+            <section className="flex  flex-col mx-4 gap-2">
                     <ProjectNameAndPeriod title={title} period={period}/>
-                    <div className='flex-1 flex sm:justify-center sm:items-center sm:max-h-1/5'>
+                    <div className='flex sm:justify-center sm:items-center'>
                         <ProjectSplashScreen imgInfo={img}/>
                     </div>
                     {
