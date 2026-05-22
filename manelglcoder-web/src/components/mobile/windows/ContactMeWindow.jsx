@@ -1,37 +1,35 @@
-import { useState } from "react"
 import TopBarWindow from "../../TopBars/TopBarWindow"
-import ToInput from "../sections/contact-me/ToInput"
-import FromInput from "../sections/contact-me/FromInput"
-import SubjectInput from "../sections/contact-me/SubjectInput"
-import MessageInput from "../sections/contact-me/MessageInput"
+import TextCenteredWithIcon from "../../generic/TextCenteredWidthIcon"
+import IconSized from "../../generic/IconSized"
+import { GITHUB_LINK,LINKEDIN_LINK, MY_GMAIL } from "../../../dto/contact_me_dto"
 
-import { BUTTON_STYLE, MOBILE_WINDOW_CLASS } from "../../../utilities/classname_utilities"
+import GmailIcon from "../../../assets/Icons/gmail_icon.svg"
+import GithubIcon from "../../../assets/Icons/github_icon.svg"
+import LinkedinIcon from "../../../assets/Icons/linkedin_icon.svg"
+import { BUTTON_STYLE, MOBILE_WINDOW_CLASS, TEXT_SUB_TITLE, TEXT_CENTERED_WITH_ICON, BG_CARD } from "../../../utilities/classname_utilities"
 
 
 const ContactMeWindow = () =>{
-    const [fromData, setFromData] = useState('')
-    const handleFromData = (data) =>{
-        setFromData(data)
-    }
-    const [subjectData, setSubjectData] = useState('')
-    const handleSubjectData = (data) =>{
-        setSubjectData(data)
-    }
-    const [messageData, setMessageData] = useState('')
-    const handleMessageData = (data) =>{
-        setMessageData(data)
-    }
     return(
-        <section className={MOBILE_WINDOW_CLASS}>
+        <section className={`${MOBILE_WINDOW_CLASS} h-fit sm:h-fit`}>
                 <TopBarWindow title='CONTACTA CONMIGO'/>
-                <div className='overflow-y-auto flex flex-col mx-4 my-1 gap-4'>
-                    <ToInput/>
-                    <FromInput sendFromData={handleFromData}/>
-                    <SubjectInput sendSubjectData={handleSubjectData}/>
-                    <MessageInput sendMessageData={handleMessageData}/>
-                    <button className={`${BUTTON_STYLE} max-w-full`}>
-                        <span>Enviar</span>
-                    </button>
+                <div className={`mx-4 my-4 ${BG_CARD}`}>
+                    <div className="flex flex-col sm:flex-row justify-center items-center sm:justify-between mx-4 my-2 gap-0 sm:gap-4">
+                        <div className="flex gap-1 items-center">
+                            <IconSized src={GmailIcon} alt={'Gmail Icon'}/>
+                            <span className={`${TEXT_SUB_TITLE} ${TEXT_CENTERED_WITH_ICON}`}>{MY_GMAIL}</span>
+                        </div>
+                        <button className={BUTTON_STYLE}
+                        onClick={()=> window.open(GITHUB_LINK, "_blank")}>
+                            <IconSized src={GithubIcon} alt={'Github Icon'}/>
+                            <TextCenteredWithIcon text='GitHub'/>
+                        </button>
+                        <button className={BUTTON_STYLE}
+                        onClick={()=> window.open(LINKEDIN_LINK, "_blank")}>
+                            <IconSized src={LinkedinIcon} alt={'Linkedin Icon'}/>
+                            <TextCenteredWithIcon text='LinkedIn'/>
+                        </button>
+                    </div>
                 </div>
             </section>
     )
