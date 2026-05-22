@@ -5,6 +5,7 @@ import DateIcon from '../../assets/Icons/date_icon.svg'
 import { TEXT_NORMAL } from "../../utilities/classname_utilities"
 import IconWithTextCentered from '../generic/IconWithTextCentered'
 import TextCenteredWithIcon from "../generic/TextCenteredWidthIcon"
+import { VERSION } from "../../dto/web_version_dto"
 
 const TopBarDesktop = () =>{
 
@@ -40,7 +41,7 @@ const TopBarDesktop = () =>{
     return(
         <section className={`flex min-w-svw max-h-10 px-5
         justify-between items-center text-red-dark-logo text-2xl bg-topbar`}>
-            <TextCenteredWithIcon text={'ManelGLCoder'} classData={`mx-2 ${TEXT_NORMAL}`}/>
+            <TextCenteredWithIcon text={`ManelGLCoder V.${VERSION}`} classData={`mx-2 ${TEXT_NORMAL}`}/>
             <div className="flex gap-2 justify-center items-center font-basis">
                 <IconWithTextCentered iconData={dateIcon} textData={dateText}/>
                 <IconWithTextCentered iconData={clockIcon} textData={clockText}/>
