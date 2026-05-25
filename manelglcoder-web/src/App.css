@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Pixelify+Sans:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+@font-face {
+    font-family: ExePixelPerfect;
+    src: url("../src/assets/fonts/EXEPixelPerfect.ttf");
+}
+@font-face {
+    font-family: Basis33;
+    src: url("../src/assets/fonts/basis33.ttf");
+}
+@font-face {
+    font-family: AquariusMono;
+    src: url("../src/assets/fonts/Aquarius-RegularMono.ttf");
+}
+@font-face {
+    font-family: Graph35;
+    src: url("../src/assets/fonts/Graph-35-pix.ttf");
+}
+@import "tailwindcss";
+
+@theme {
+    --color-desktop: #1d1b20;
+    --color-window-bg: #3e3a45;
+    --color-topbar: #c6bfcf;
+    --color-color_line: #b2003e;
+    --color-color_vertical_line: #b2003e;
+    --color-title: #b2003e;
+    --color-normal:  #791136;
+    --color-color_bold: #b2003e;
+    --color-color_semibold: #791136;
+    --color-card: #c7bed1;
+    --color-window: #791136;
+
+    --color-red-light-logo: #b2003e;
+    --color-red-dark-logo: #791136;
+
+    --color-button-text: #b2003e;
+    --color-button-normal: #c97995;
+    --color-button-hover: #cf99ac;
+
+    --font-logo: "Source Code Pro", monospace;
+    --font-pixel-number: "DotGothic16", sans-serif;
+    --font-pixel-texts: "Pixelify Sans", sans-serif;
+
+    --font-exe-pixel-perfect: ExePixelPerfect, "sans-serif";
+    --font-basis: Basis33, "sans-serif";
+    --font-aquarius-mono: AquariusMono, "sans-serif";
+    --font-graph35: Graph35, "sans-serif";
+}
