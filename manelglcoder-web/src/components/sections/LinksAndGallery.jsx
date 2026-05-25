@@ -4,8 +4,12 @@ import GalleryButton from "../buttons/GalleryButton"
 const LinksAndGallery = ({links, gallery}) =>{
     return(
         <div className='flex gap-2 justify-start items-center'>
-            <Links links={links}/>
-            <GalleryButton galleryInfo={gallery}/>
+            {
+                links ? <Links links={links}/> : ''
+            }
+            {
+                gallery ? <GalleryButton galleryInfo={gallery}/> : ''
+            }
         </div>
     )
 }

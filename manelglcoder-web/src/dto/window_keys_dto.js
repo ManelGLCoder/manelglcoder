@@ -1,0 +1,5 @@
+export const PROFESSIONAL_KEY = 'profesional_key'
+export const LAST_PROJECTS_KEY = 'last_projects_key'
+export const ABOUT_ME_KEY = 'about_me_key'
+export const CONCTACT_ME_KEY = 'contact_me_key'
+export const OLD_PROJECTS_KEY = 'old_projects_key'

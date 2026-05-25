@@ -9,7 +9,7 @@ const AboutMeWindow = () =>{
 
     return(
         <section 
-        className={`absolute left-10 top-15 
+        className={`absolute left-50 top-25 
         flex flex-col w-6/10 h-2/3 
         border-2 border-red-dark-logo bg-window-bg`}>
             <TopBarWindow title='SOBRE MI'/>

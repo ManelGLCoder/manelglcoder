@@ -15,7 +15,7 @@ import MoreInfo from './MoreInfo'
 import { TITLE_CARD, BG_CARD, TEXT_SUB_TITLE, TEXT_NORMAL} from '../../../utilities/classname_utilities'
 
 const ProjectCard = ({info}) =>{
-    const {title, img, category, period, rol, tasks, links, tools, gallery, extra} = info
+    const {title, img, category, period, rol, tasks, links, tools, gallery, extra, gameData} = info
     const [showMoreInfo, setShowMoreInfo] = useState(false)
     const altShowMoreInfo = () => setShowMoreInfo(!showMoreInfo)
 
@@ -26,7 +26,11 @@ const ProjectCard = ({info}) =>{
             <section className="flex">
                 <div className="flex flex-1 flex-col mx-4 gap-2">
                     <ProjectNameAndPeriod title={title} period={period}/>
-                    <ProjectDataSheet info={info}/>
+                    {
+                        !gameData? 
+                        <MoreInfo extraInfo={extra}/> :
+                        <ProjectDataSheet info={gameData}/>
+                    }
                     <HorizontalLineSeparator/>
                     <RolAndTasks rol={rol} tasks={tasks}/>
                 </div>
@@ -39,7 +43,9 @@ const ProjectCard = ({info}) =>{
             <div className='flex gap-1 justify-start items-center mx-4'>
                 <LinksAndGallery links={links} gallery={gallery}/>
             </div>
-            <ShowMoreInfoButton click={altShowMoreInfo} showMoreInfo={showMoreInfo}/>
+            {
+                !gameData ? '' : <ShowMoreInfoButton click={altShowMoreInfo} showMoreInfo={showMoreInfo}/>
+            }
             {
                 showMoreInfo ? 
                 <section className="relative mx-2">

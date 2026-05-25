@@ -11,21 +11,32 @@ import AboutMeWindow from "../windows/AboutMeWindow"
 import ContactMeWindow from "../windows/ContactMeWindow"
 import PROFESSIONAL_DATA from "../../../dto/professional_dto"
 import PROJECTS_DATA from "../../../dto/projects_dto"
+import OLD_PROJECTS_DATA from "../../../dto/old_projects_dto"
 
-
-// //TODO: Eliminar tras acabar de diseñar la galería
-import test_gallery_1 from '../../../assets/code-bcn-first-warrior/gallery_1.avif'
-import cbfw_gallery_2 from '../../../assets/code-bcn-first-warrior/gallery_2.avif'
-import cbfw_gallery_3 from '../../../assets/code-bcn-first-warrior/gallery_3.avif'
-import cbfw_gallery_4 from '../../../assets/code-bcn-first-warrior/gallery_4.avif'
-const TMP_GALLERY_CONTENT = [
-        {src:test_gallery_1, alt:'CODE BCN img 1'},
-        {src:cbfw_gallery_2, alt:'CODE BCN img 2'},
-        {src:cbfw_gallery_3, alt:'CODE BCN img 3'},
-        {src:cbfw_gallery_4, alt:'CODE BCN img 4'},
-    ]
+import { useContext } from "react"
+import { WindowContext } from "../../../contexts/WindowsContext"
+import { PROFESSIONAL_KEY, LAST_PROJECTS_KEY, ABOUT_ME_KEY, CONCTACT_ME_KEY, OLD_PROJECTS_KEY } from "../../../dto/window_keys_dto"
+import { GalleryContext } from "../../../contexts/GalleryContext"
 
 const Portrait = () =>{
+    const {currWindow} = useContext(WindowContext)
+    const {visible} = useContext(GalleryContext)
+    const showWindow = (windowKey) =>{
+        switch (windowKey) {
+            case PROFESSIONAL_KEY:
+                return  <FolderWindow title={'PROFESIONAL'} content={PROFESSIONAL_DATA} category={'professional'}/>
+            case LAST_PROJECTS_KEY:
+                return <FolderWindow title={'PROYECTOS'} content={PROJECTS_DATA} category={'project'}/>
+            case ABOUT_ME_KEY:
+                return <AboutMeWindow/>
+            case CONCTACT_ME_KEY:
+                return <ContactMeWindow/>
+            case OLD_PROJECTS_KEY:
+                return <FolderWindow title={'PROYECTOS ANTIGUOS'} content={OLD_PROJECTS_DATA} category={'project'}/>
+            default:
+                return ''
+        }
+    }
     return(
         <div className={`flex-1 grid grid-cols-3 grid-rows-5`}>
             <ProfessionalButton position={'row-start-1 col-start-1'}/>
@@ -33,12 +44,12 @@ const Portrait = () =>{
             <AboutMeButton position={'row-start-1 col-start-3'}/>
             <ContactButton position={'row-start-5 col-start-1'}/>
             <OldestProjectButton position={'row-start-5 col-start-3'} name={'Proyectos Antiguos'}/>
-
-            {/* <FolderWindow title={'PROFESIONAL'} content={PROFESSIONAL_DATA} category={'professional'}/> */}
-            {/* <FolderWindow title={'PROYECTOS'} content={PROJECTS_DATA} category={'project'}/> */}
-            {/* <AboutMeWindow/> */}
-            {/* <ContactMeWindow/> */}
-            <GalleryWindow title={'GALERÍA'} content={TMP_GALLERY_CONTENT}/>
+            {
+                showWindow(currWindow)
+            }
+            {
+                visible ? <GalleryWindow title={'GALERÍA'}/> : ''
+            }
         </div>
     )
 }
