@@ -1,4 +1,4 @@
-import TmpICon from '../../../../public/ManelGLCoder.svg'
+import MyPhoto from '../../../assets/Manel2026.jpg'
 
 import SoftSkills from './SoftSkills'
 import Skills from './Skills'
@@ -9,7 +9,7 @@ const ManelGLCard = () =>{
         <div className={`flex flex-col mx-4 my-4 gap-1 ${BG_CARD}`}>
             <span className={TITLE_CARD}>MANEL GISBERT LÓPEZ</span>
             <section className="relative -top-4 flex justify-center items-center">
-                <img className='p-1 object-cover w-1/5' src={TmpICon} alt="Manel Photo"/>
+                <img className='p-7 object-cover w-1/5' src={MyPhoto} alt="Manel Photo"/>
                 <div className="flex flex-1 flex-col gap-2 mx-2">
                     <p className={`px-2 ${TEXT_NORMAL}`}>Me considero una persona <span className='text-color_bold'> extrovertida</span>
                         ,

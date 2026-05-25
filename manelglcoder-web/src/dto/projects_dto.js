@@ -14,7 +14,7 @@ const MY_WEB = {
     category: 'Proyecto Personal',
     img: {
         src: w_img,
-        alt: 'Pokedex React'
+        alt: 'Web img'
     },
     period: 'Abr - May 2026',
     gameData:null,
