@@ -16,7 +16,7 @@ const AboutMeWindow = ({windowKey}) =>{
 
     return(
         <section ref={windowRef}
-        className={`absolute flex flex-col w-6/10 h-2/3
+        className={`absolute flex flex-col w-[60%] h-2/3
         border-2 border-red-dark-logo bg-window-bg`}
         style={{
             left: position.x,

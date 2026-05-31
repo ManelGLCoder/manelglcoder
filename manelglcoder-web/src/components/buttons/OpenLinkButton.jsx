@@ -7,6 +7,7 @@ const OpenLinkButton = ({click}) =>{
     const [over, setOver] = useState(false);
     return(
         <button className={`flex flex-col justify-center items-center`}
+        onClick={click}
         onMouseOver={() => setOver(true)}
         onMouseOut={() => setOver(false)}>
             <img className='size-6' 

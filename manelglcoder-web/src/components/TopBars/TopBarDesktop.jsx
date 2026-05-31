@@ -40,7 +40,7 @@ const TopBarDesktop = () =>{
     const clockText = { text: currTime}
     const textSize = 'text-xl sm:text-2xl'
     return(
-        <section className={`flex min-w-svw max-h-10 sm:px-5
+        <section className={`flex min-w-[100svw] max-h-10 sm:px-5
         justify-center sm:justify-between items-center text-red-dark-logo text-2xl bg-topbar`}>
             <TextCenteredWithIcon text={`V.${VERSION}`} classData={`mx-1 sm:mx-2 ${TEXT_NORMAL} ${textSize}`}/>
             <TextCenteredWithIcon text={`ManelGLCoder`} classData={`mx-2 ${TEXT_NORMAL} ${textSize}`}/>

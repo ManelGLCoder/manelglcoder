@@ -29,8 +29,8 @@ function App() {
   }
   useEffect(() => {
       handleWindowResize()
-      window.addEventListener("resize", handleWindowResize.bind(this));
-      return () => null
+      window.addEventListener("resize", handleWindowResize);
+      return () => window.removeEventListener("resize", handleWindowResize)
 }, []);
   return (
     <div className={`flex h-dvh w-dvw select-none crt-overlay relative${isGlitching ? ' glitch-split' : ''}`}>

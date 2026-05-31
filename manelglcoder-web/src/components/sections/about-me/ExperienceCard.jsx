@@ -1,7 +1,6 @@
 import { memo } from 'react'
 import { EXPERIENCE_DATA } from "../../../dto"
 import { TITLE_CARD, BG_CARD, BEFORE_VERTICAL_LINE, TEXT_NORMAL } from "../../../utilities"
-import { OpenLinkButton } from "../../buttons"
 import CompanyIcon from "../../../assets/Icons/company_icon.svg"
 import DateIcon from "../../../assets/Icons/hover_date_icon.svg"
 import { IconWithTextCentered } from "../../generic"
@@ -18,7 +17,6 @@ const ExperienceCard = () =>{
                         return(
                             <li className={`flex flex-col gap-1 ${TEXT_NORMAL}`} key={i}>
                                 <div className="flex justify-center items-center gap-0.5 ">
-                                    <OpenLinkButton click={''}/>
                                     <IconWithTextCentered iconData={companyIcon} 
                                         textData={{text: experience.company, classTextData: 'text-color_bold'}}
                                     />

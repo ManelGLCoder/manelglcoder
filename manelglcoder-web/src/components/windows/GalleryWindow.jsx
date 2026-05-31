@@ -21,7 +21,7 @@ const GalleryWindow = ({title, windowKey}) =>{
     }
     return(
         <section ref={windowRef}
-        className={`absolute flex flex-col w-2/5 h-4/7
+        className={`absolute flex flex-col w-2/5 h-[57%]
         border-2 border-red-dark-logo bg-window-bg`}
         style={{
             left: position.x,
