@@ -4,10 +4,10 @@ import { WindowContext } from '../../../contexts/WindowsContext';
 
 const MobileButton = ({name, icon, keyClick}) =>{
     const [over, setOver] = useState(false);
-    const {setCurrWindow} = useContext(WindowContext)
+    const {openWindow} = useContext(WindowContext)
     const handleShowWindow = () =>{
         setOver(true)
-        setCurrWindow(keyClick)
+        openWindow(keyClick)
     }
     return(
         <button className={`flex flex-1 flex-col justify-center items-center p-2

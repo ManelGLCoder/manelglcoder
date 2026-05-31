@@ -3,18 +3,18 @@ import { WindowContext } from '../../contexts/WindowsContext';
 import closeIcon from '../../assets/Icons/Close.svg'
 import hoverCloseIcon from '../../assets/Icons/Close_over.svg'
 
-const CloseWindowButton = () =>{
+const CloseWindowButton = ({windowKey}) =>{
     const [over, setOver] = useState(false);
-    const {setCurrWindow} = useContext(WindowContext)
-    const closeWindow = () =>{
-        setCurrWindow('none')
+    const {closeWindow} = useContext(WindowContext)
+    const handleClose = () =>{
+        closeWindow(windowKey)
     }
     return(
         <button className={`flex flex-col justify-center items-center`}
-        onClick={closeWindow}
+        onClick={handleClose}
         onMouseOver={() => setOver(true)}
         onMouseOut={() => setOver(false)}>
-            <img className='size-8' 
+            <img className='size-8'
             src={over ? hoverCloseIcon : closeIcon}
             alt="Close Icon" />
         </button>

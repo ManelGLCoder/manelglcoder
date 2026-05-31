@@ -47,3 +47,56 @@
     --font-aquarius-mono: AquariusMono, "sans-serif";
     --font-graph35: Graph35, "sans-serif";
 }
+
+.crt-overlay::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.07) 0px,
+      rgba(0, 0, 0, 0.07) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    radial-gradient(
+      ellipse at center,
+      transparent 55%,
+      rgba(0, 0, 0, 0.35) 100%
+    );
+
+  animation: crt-flicker 8s ease-in-out infinite;
+}
+
+@keyframes crt-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.992; }
+}
+
+body {
+  background-color: #1d1b20;
+}
+
+.glitch-split {
+  animation: glitch-split 0.2s ease-in-out;
+}
+
+@keyframes glitch-split {
+  0% { clip-path: inset(0); transform: translateX(0); }
+  5% { clip-path: inset(25% 0 45% 0); transform: translateX(-5px); }
+  10% { clip-path: inset(25% 0 45% 0); transform: translateX(5px); }
+  15% { clip-path: inset(45% 0 15% 0); transform: translateX(-4px); }
+  20% { clip-path: inset(45% 0 15% 0); transform: translateX(4px); }
+  25% { clip-path: inset(10% 0 60% 0); transform: translateX(-6px); }
+  30% { clip-path: inset(10% 0 60% 0); transform: translateX(6px); }
+  35% { clip-path: inset(60% 0 10% 0); transform: translateX(-3px); }
+  40% { clip-path: inset(60% 0 10% 0); transform: translateX(3px); }
+  45% { clip-path: inset(35% 0 35% 0); transform: translateX(-5px); }
+  50% { clip-path: inset(35% 0 35% 0); transform: translateX(5px); }
+  55% { clip-path: inset(0); transform: translateX(0); }
+  100% { clip-path: inset(0); transform: translateX(0); }
+}

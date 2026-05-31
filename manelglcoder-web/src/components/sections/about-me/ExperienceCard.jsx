@@ -1,10 +1,9 @@
-import { EXPERIENCE_DATA } from "../../../dto/about_me_dto"
-import { TITLE_CARD, BG_CARD, BEFORE_VERTICAL_LINE, TEXT_NORMAL } from "../../../utilities/classname_utilities"
-
-import OpenLinkButton from "../../buttons/OpenLinkButton"
+import { memo } from 'react'
+import { EXPERIENCE_DATA } from "../../../dto"
+import { TITLE_CARD, BG_CARD, BEFORE_VERTICAL_LINE, TEXT_NORMAL } from "../../../utilities"
 import CompanyIcon from "../../../assets/Icons/company_icon.svg"
 import DateIcon from "../../../assets/Icons/hover_date_icon.svg"
-import IconWithTextCentered from "../../generic/IconWithTextCentered"
+import { IconWithTextCentered } from "../../generic"
 
 const ExperienceCard = () =>{
     const companyIcon = { src: CompanyIcon, alt: 'Company Icon'}
@@ -18,7 +17,6 @@ const ExperienceCard = () =>{
                         return(
                             <li className={`flex flex-col gap-1 ${TEXT_NORMAL}`} key={i}>
                                 <div className="flex justify-center items-center gap-0.5 ">
-                                    <OpenLinkButton click={''}/>
                                     <IconWithTextCentered iconData={companyIcon} 
                                         textData={{text: experience.company, classTextData: 'text-color_bold'}}
                                     />
@@ -39,4 +37,4 @@ const ExperienceCard = () =>{
     )
 }
 
-export default ExperienceCard
+export default memo(ExperienceCard)

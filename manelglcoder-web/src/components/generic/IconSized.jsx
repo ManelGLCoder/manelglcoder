@@ -1,4 +1,5 @@
-import { ICON_SIZE } from "../../utilities/classname_utilities"
+import { memo } from 'react'
+import { ICON_SIZE } from "../../utilities"
 
 const IconSized = ({src, alt, classData= ''}) =>{
     return(
@@ -6,4 +7,4 @@ const IconSized = ({src, alt, classData= ''}) =>{
     )
 }
 
-export default IconSized
+export default memo(IconSized)

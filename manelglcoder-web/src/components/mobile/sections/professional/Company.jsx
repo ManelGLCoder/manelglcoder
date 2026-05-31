@@ -1,7 +1,8 @@
+import { memo } from 'react'
 import DateIcon from '../../../../assets/Icons/hover_date_icon.svg'
 import CompanyLogo from './CompanyLogo'
-import IconWithTextCentered from '../../../generic/IconWithTextCentered'
-import { TEXT_NORMAL, TEXT_SUB_TITLE } from '../../../../utilities/classname_utilities'
+import { IconWithTextCentered } from '../../../generic'
+import { TEXT_NORMAL, TEXT_SUB_TITLE } from '../../../../utilities'
 
 const Company = ({logo, period, companyDes}) =>{
     const dateIcon = {src:DateIcon, alt:'Date Icon'}
@@ -18,4 +19,4 @@ const Company = ({logo, period, companyDes}) =>{
     )
 }
 
-export default Company
+export default memo(Company)

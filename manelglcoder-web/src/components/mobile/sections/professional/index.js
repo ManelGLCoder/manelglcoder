@@ -1,0 +1,3 @@
+﻿export { default as CompanyLogo } from './CompanyLogo'
+export { default as Company } from './Company'
+export { default as ProfessionalCard } from './ProfessionalCard'
