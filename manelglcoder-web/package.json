@@ -2,7 +2,7 @@
   "name": "manelglcoder-web",
   "homepage": "https://ManelGLCoder.github.io/manelglcoder/",
   "private": true,
-  "version": "1.0.3",
+  "version": "1.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
