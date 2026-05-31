@@ -14,7 +14,7 @@ const DesktopButton = ({name, icon, hoverIcon, keyClick}) =>{
         onDoubleClick={handleShowWindow}
         onMouseOver={() => setOver(true)}
         onMouseOut={() => setOver(false)}>
-            <img className='size-15' 
+            <img className='size-15'
             src={over ? hoverIcon : icon}
             alt="Button Icon" />
             <span className={TEXT_BUTTON}>{name}</span>

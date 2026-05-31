@@ -14,7 +14,7 @@ const CloseWindowButton = () =>{
         onClick={closeWindow}
         onMouseOver={() => setOver(true)}
         onMouseOut={() => setOver(false)}>
-            <img className='size-8' 
+            <img className='size-8'
             src={over ? hoverCloseIcon : closeIcon}
             alt="Close Icon" />
         </button>

@@ -8,15 +8,22 @@ import GmailIcon from "../../assets/Icons/gmail_icon.svg"
 import GithubIcon from "../../assets/Icons/github_icon.svg"
 import LinkedinIcon from "../../assets/Icons/linkedin_icon.svg"
 import { BUTTON_STYLE, TEXT_SUB_TITLE, TEXT_CENTERED_WITH_ICON, BG_CARD } from "../../utilities/classname_utilities"
-
+import useWindowBehavior from "../../hooks/useWindowBehavior"
 
 const ContactMeWindow = () =>{
+    const { windowRef, position, handleDragStart } = useWindowBehavior({
+        defaultX: 200, defaultY: 150
+    })
 
     return(
-        <section className={`absolute left-100 top-15 flex flex-col
-        h-fit w-1/3
-        border-2 border-red-dark-logo bg-window-bg`}>
-                <TopBarWindow title='CONTACTA CONMIGO'/>
+        <section ref={windowRef}
+        className={`absolute flex flex-col h-fit w-1/3
+        border-2 border-red-dark-logo bg-window-bg`}
+        style={{
+            left: position.x,
+            top: position.y,
+        }}>
+                <TopBarWindow title='CONTACTA CONMIGO' onDragStart={handleDragStart}/>
                 <div className={`mx-4 my-4 ${BG_CARD}`}>
                     <div className="flex justify-between mx-4 my-2 gap-4">
                         <button className={BUTTON_STYLE}
