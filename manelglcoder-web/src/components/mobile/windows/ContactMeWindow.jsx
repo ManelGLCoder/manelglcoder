@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+import { WindowContext } from '../../../contexts/WindowsContext'
 import TopBarWindow from "../../TopBars/TopBarWindow"
 import TextCenteredWithIcon from "../../generic/TextCenteredWidthIcon"
 import IconSized from "../../generic/IconSized"
@@ -9,10 +11,13 @@ import LinkedinIcon from "../../../assets/Icons/linkedin_icon.svg"
 import { BUTTON_STYLE, MOBILE_WINDOW_CLASS, TEXT_SUB_TITLE, TEXT_CENTERED_WITH_ICON, BG_CARD } from "../../../utilities/classname_utilities"
 
 
-const ContactMeWindow = () =>{
+const ContactMeWindow = ({windowKey}) =>{
+    const { bringToFront, getZIndex } = useContext(WindowContext)
     return(
-        <section className={`${MOBILE_WINDOW_CLASS} h-fit sm:h-fit`}>
-                <TopBarWindow title='CONTACTA CONMIGO'/>
+        <section className={`${MOBILE_WINDOW_CLASS} h-fit sm:h-fit`}
+        style={{ zIndex: getZIndex(windowKey) }}
+        onMouseDown={() => bringToFront(windowKey)}>
+                <TopBarWindow title='CONTACTA CONMIGO' windowKey={windowKey}/>
                 <div className={`mx-4 my-4 ${BG_CARD}`}>
                     <div className="flex flex-col sm:flex-row justify-center items-center sm:justify-between mx-4 my-2 gap-0 sm:gap-4">
                         <div className="flex gap-1 items-center">

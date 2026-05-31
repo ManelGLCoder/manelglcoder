@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+import { WindowContext } from '../../contexts/WindowsContext'
 import TopBarWindow from "../TopBars/TopBarWindow"
 
 import TextCenteredWithIcon from "../generic/TextCenteredWidthIcon"
@@ -10,7 +12,8 @@ import LinkedinIcon from "../../assets/Icons/linkedin_icon.svg"
 import { BUTTON_STYLE, TEXT_SUB_TITLE, TEXT_CENTERED_WITH_ICON, BG_CARD } from "../../utilities/classname_utilities"
 import useWindowBehavior from "../../hooks/useWindowBehavior"
 
-const ContactMeWindow = () =>{
+const ContactMeWindow = ({windowKey}) =>{
+    const { bringToFront, getZIndex } = useContext(WindowContext)
     const { windowRef, position, handleDragStart } = useWindowBehavior({
         defaultX: 200, defaultY: 150
     })
@@ -22,8 +25,10 @@ const ContactMeWindow = () =>{
         style={{
             left: position.x,
             top: position.y,
-        }}>
-                <TopBarWindow title='CONTACTA CONMIGO' onDragStart={handleDragStart}/>
+            zIndex: getZIndex(windowKey),
+        }}
+        onMouseDown={() => bringToFront(windowKey)}>
+                <TopBarWindow title='CONTACTA CONMIGO' onDragStart={handleDragStart} windowKey={windowKey}/>
                 <div className={`mx-4 my-4 ${BG_CARD}`}>
                     <div className="flex justify-between mx-4 my-2 gap-4">
                         <button className={BUTTON_STYLE}

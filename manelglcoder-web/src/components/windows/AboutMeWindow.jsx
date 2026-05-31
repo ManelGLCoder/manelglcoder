@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+import { WindowContext } from '../../contexts/WindowsContext'
 import TopBarWindow from "../TopBars/TopBarWindow"
 import ManelGLCard from "../sections/about-me/ManelGLCard"
 import ExperienceCard from "../sections/about-me/ExperienceCard"
@@ -6,7 +8,8 @@ import SoftSkills from "../sections/about-me/SoftSkills"
 import Skills from "../sections/about-me/Skills"
 import useWindowBehavior from "../../hooks/useWindowBehavior"
 
-const AboutMeWindow = () =>{
+const AboutMeWindow = ({windowKey}) =>{
+    const { bringToFront, getZIndex } = useContext(WindowContext)
     const { windowRef, position, handleDragStart } = useWindowBehavior({
         defaultX: 120, defaultY: 100
     })
@@ -18,8 +21,10 @@ const AboutMeWindow = () =>{
         style={{
             left: position.x,
             top: position.y,
-        }}>
-            <TopBarWindow title='SOBRE MI' onDragStart={handleDragStart}/>
+            zIndex: getZIndex(windowKey),
+        }}
+        onMouseDown={() => bringToFront(windowKey)}>
+            <TopBarWindow title='SOBRE MI' onDragStart={handleDragStart} windowKey={windowKey}/>
             <div className='overflow-y-auto flex flex-col flex-1 my-1 gap-4'>
                 <ManelGLCard/>
                 <div className="flex justify-between gap-4 mx-4">
