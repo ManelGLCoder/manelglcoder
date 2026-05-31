@@ -1,16 +1,19 @@
-## Hi there 👋
+### Hola 👋 Soy Manel Gisbert
 
-<!--
-**ManelGLCoder/manelglcoder** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Soy **desarrollador Front-End y de Videojuegos** de España, especializado en crear experiencias interactivas — desde slots con Kotlin hasta aplicaciones web con React.
 
-Here are some ideas to get you started:
+🚀 **Este repositorio** es mi perfil de GitHub y aloja mi web portfolio:  
+🔗 [ManelGLCoder.github.io/manelglcoder](https://ManelGLCoder.github.io/manelglcoder)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+> Construida con **React 19 + Vite 8 + Tailwind CSS 4**, con una estética retro de escritorio con ventanas arrastrables, efectos CRT y sonido ambiente estático. Totalmente responsive.
+
+---
+
+### 🛠️ Tecnologías
+
+`React` `Vite` `Tailwind CSS` `Kotlin` `C#` `Unity` `Godot` `Unreal Engine`
+
+### 📫 Contacto
+
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=linkedin)](https://linkedin.com/in/manelgisbertlopez/)
+[![Email](https://img.shields.io/badge/-Email-red?style=flat&logo=gmail)](mailto:manelglcoder@gmail.com)

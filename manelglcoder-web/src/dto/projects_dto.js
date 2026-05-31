@@ -43,7 +43,17 @@ const MY_WEB = {
         {
             title:'Destacable', 
             texts:[
+                `v.1.1:`,
+                `- Sistema multiventana con z-index dinámico`,
+                `- Funcionalidad drag de las ventanas sin sobresalir`,
+                `- Efecto glicth visual y sonoro`,
+                `- Efecto CTR visual`,
+                `- Pequeños ajustes y arreglos visuales`,
+                `- Arreglos de fugas de memorias`,
+                `v.1.0:`,
                 `- Diseño como si fuera un escritorio de ordenador(vista de PC) o de móvil(vista de smartphone)`,
+                `- Apartados como si fueran ventanas de escritorio`,
+                `- Solo se muestra un apartado a la vez, al abrir una segunda ventana se cierra la anterior`,
             ]},
     ]
 }
