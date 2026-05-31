@@ -1,7 +1,7 @@
+import { memo } from 'react'
 import LinkIcon from '../../../assets/Icons/link_icon.svg'
-import IconSized from '../../generic/IconSized'
-import TextCenteredWithIcon from '../../generic/TextCenteredWidthIcon'
-import { BUTTON_STYLE } from '../../../utilities/classname_utilities'
+import { IconSized, TextCenteredWithIcon } from '../../generic'
+import { BUTTON_STYLE } from '../../../utilities'
 
 const Links = ({links}) =>{
     return(
@@ -21,4 +21,4 @@ const Links = ({links}) =>{
     )
 }
 
-export default Links
+export default memo(Links)

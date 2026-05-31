@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, memo } from 'react'
 
 import ProjectNameAndPeriod from './ProjectNameAndPeriod'
 import ProjectDataSheet from './ProjectDataSheet'
@@ -56,4 +56,4 @@ const ProjectCard = ({info}) =>{
     )
 }
 
-export default ProjectCard
+export default memo(ProjectCard)

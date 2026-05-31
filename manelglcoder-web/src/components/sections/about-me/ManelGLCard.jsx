@@ -1,8 +1,8 @@
+import { memo } from 'react'
 import MyPhoto from '../../../assets/Manel2026.jpg'
-
 import SoftSkills from './SoftSkills'
 import Skills from './Skills'
-import { TITLE_CARD, BG_CARD, TEXT_SUB_TITLE, TEXT_NORMAL } from '../../../utilities/classname_utilities'
+import { TITLE_CARD, BG_CARD, TEXT_SUB_TITLE, TEXT_NORMAL } from '../../../utilities'
 
 const ManelGLCard = () =>{
     return(
@@ -28,4 +28,4 @@ const ManelGLCard = () =>{
     )
 }
 
-export default ManelGLCard
+export default memo(ManelGLCard)

@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import IconSized from "./IconSized"
 import TextCenteredWithIcon from "./TextCenteredWidthIcon"
 
@@ -12,4 +13,4 @@ const IconWithTextCentered = ({iconData, textData, classData=''}) =>{
     )
 }
 
-export default IconWithTextCentered
+export default memo(IconWithTextCentered)

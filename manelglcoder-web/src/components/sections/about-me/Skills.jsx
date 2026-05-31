@@ -1,5 +1,6 @@
-import { SKILLS_DATA } from "../../../dto/about_me_dto"
-import { BG_CARD, TITLE_CARD } from "../../../utilities/classname_utilities"
+import { memo } from 'react'
+import { SKILLS_DATA } from "../../../dto"
+import { BG_CARD, TITLE_CARD } from "../../../utilities"
 
 const Skills = () =>{
     return(
@@ -16,4 +17,4 @@ const Skills = () =>{
     )
 }
 
-export default Skills
+export default memo(Skills)

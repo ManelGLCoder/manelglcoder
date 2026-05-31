@@ -1,5 +1,6 @@
 
-import { STUDIES_DATA } from "../../../../dto/about_me_dto"
+import { memo } from 'react'
+import { STUDIES_DATA } from "../../../../dto"
 import DateIcon from "../../../../assets/Icons/hover_date_icon.svg"
 import CompanyIcon from "../../../../assets/Icons/company_icon.svg"
 import CertificateIcon from "../../../../assets/Icons/certificate_icon.svg"
@@ -39,4 +40,4 @@ const StudiesCard = () =>{
     )
 }
 
-export default StudiesCard
+export default memo(StudiesCard)

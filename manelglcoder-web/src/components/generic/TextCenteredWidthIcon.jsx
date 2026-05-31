@@ -1,4 +1,5 @@
-import { TEXT_CENTERED_WITH_ICON } from "../../utilities/classname_utilities";
+import { memo } from 'react'
+import { TEXT_CENTERED_WITH_ICON } from "../../utilities";
 
 const TextCenteredWithIcon = ({text, classData=''}) =>{
     return(
@@ -6,4 +7,4 @@ const TextCenteredWithIcon = ({text, classData=''}) =>{
     )
 }
 
-export default TextCenteredWithIcon
+export default memo(TextCenteredWithIcon)

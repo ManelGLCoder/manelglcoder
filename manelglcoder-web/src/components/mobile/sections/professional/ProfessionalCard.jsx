@@ -1,10 +1,8 @@
 import Company from './Company'
-import HorizontalLineSeparator from '../../../HorizontalLineSeparator'
-import RolAndTasks from '../RolAndTasks'
-import LinksAndGallery from '../LinksAndGallery'
-import Tools from '../Tools'
-
-import { MOBILE_TITLE_CARD, BG_CARD } from '../../../../utilities/classname_utilities'
+import { memo } from 'react'
+import { HorizontalLineSeparator } from '../../../'
+import { RolAndTasks, LinksAndGallery, Tools } from '../'
+import { MOBILE_TITLE_CARD, BG_CARD } from '../../../../utilities'
 
 const ProfessionalCard = ({info}) =>{
     const {title, logo, period, companyDes, rol, tasks, links, tools, gallery} = info
@@ -27,4 +25,4 @@ const ProfessionalCard = ({info}) =>{
     )
 }
 
-export default ProfessionalCard
+export default memo(ProfessionalCard)

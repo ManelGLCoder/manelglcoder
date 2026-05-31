@@ -1,4 +1,5 @@
-import { SOFT_SKILLS_DATA } from "../../../../dto/about_me_dto"
+import { memo } from 'react'
+import { SOFT_SKILLS_DATA } from "../../../../dto"
 import { TITLE_CARD, BG_CARD, TEXT_NORMAL, MOBILE_CARD_CLASS } from "../../../../utilities/classname_utilities"
 
 const SoftSkills = () =>{
@@ -16,4 +17,4 @@ const SoftSkills = () =>{
         )
 }
 
-export default SoftSkills
+export default memo(SoftSkills)

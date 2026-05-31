@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react"
+import { useContext, useEffect, memo } from "react"
 import { WindowContext } from "../../contexts/WindowsContext"
 import ProfessionalButton from "../buttons/ProfesionalButton"
 import LatestProjectsButton from "../buttons/LatestProjectsButton"
@@ -53,4 +53,4 @@ const Desktop = () =>{
     )
 }
 
-export default Desktop
+export default memo(Desktop)

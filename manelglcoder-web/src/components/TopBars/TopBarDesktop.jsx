@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, memo } from "react"
 
 import ClockIcon from '../../assets/Icons/clock_icon.svg'
 import DateIcon from '../../assets/Icons/date_icon.svg'
@@ -52,4 +52,4 @@ const TopBarDesktop = () =>{
     )
 }
 
-export default TopBarDesktop
+export default memo(TopBarDesktop)

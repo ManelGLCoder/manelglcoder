@@ -1,7 +1,8 @@
+import { memo } from 'react'
 import RoleIcon from '../../../assets/Icons/role_icon.svg'
 import TasksIcon from '../../../assets/Icons/tasks_icon.svg'
-import { TEXT_SUB_TITLE, TEXT_NORMAL } from '../../../utilities/classname_utilities'
-import IconWithTextCentered from '../../generic/IconWithTextCentered'
+import { TEXT_SUB_TITLE, TEXT_NORMAL } from '../../../utilities'
+import { IconWithTextCentered } from '../../generic'
 
 const RolAndTasks = ({rol, tasks}) =>{
     const rolIcon = {src:RoleIcon, alt:'Role Icon'}
@@ -24,4 +25,4 @@ const RolAndTasks = ({rol, tasks}) =>{
     )
 }
 
-export default RolAndTasks
+export default memo(RolAndTasks)

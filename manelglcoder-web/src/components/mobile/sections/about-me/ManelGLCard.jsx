@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import MyPhoto from '../../../../assets/Manel2026.jpg'
 
 import SoftSkills from './SoftSkills'
@@ -28,4 +29,4 @@ const ManelGLCard = () =>{
     )
 }
 
-export default ManelGLCard
+export default memo(ManelGLCard)

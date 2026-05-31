@@ -1,6 +1,7 @@
+import { memo } from 'react'
 import ToolsIcon from '../../assets/Icons/tools_icon.svg'
-import { TEXT_SUB_TITLE } from '../../utilities/classname_utilities'
-import IconWithTextCentered from '../generic/IconWithTextCentered'
+import { TEXT_SUB_TITLE } from '../../utilities'
+import { IconWithTextCentered } from '../generic'
 
 const Tools = ({tools}) =>{
     const toolsIcon ={src:ToolsIcon, alt:'Tools Icon'}
@@ -19,4 +20,4 @@ const Tools = ({tools}) =>{
     )
 }
 
-export default Tools
+export default memo(Tools)

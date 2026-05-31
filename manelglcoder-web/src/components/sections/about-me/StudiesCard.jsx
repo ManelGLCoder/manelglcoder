@@ -1,10 +1,11 @@
 
-import { STUDIES_DATA } from "../../../dto/about_me_dto"
+import { memo } from 'react'
+import { STUDIES_DATA } from "../../../dto"
 import DateIcon from "../../../assets/Icons/hover_date_icon.svg"
 import CompanyIcon from "../../../assets/Icons/company_icon.svg"
 import CertificateIcon from "../../../assets/Icons/certificate_icon.svg"
-import { TITLE_CARD, BG_CARD, TEXT_NORMAL } from "../../../utilities/classname_utilities"
-import IconWithTextCentered from "../../generic/IconWithTextCentered"
+import { TITLE_CARD, BG_CARD, TEXT_NORMAL } from "../../../utilities"
+import { IconWithTextCentered } from "../../generic"
 
 const StudiesCard = () =>{
     return(
@@ -40,4 +41,4 @@ const StudiesCard = () =>{
     )
 }
 
-export default StudiesCard
+export default memo(StudiesCard)

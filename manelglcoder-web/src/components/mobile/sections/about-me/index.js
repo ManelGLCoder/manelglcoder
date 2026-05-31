@@ -1,0 +1,5 @@
+﻿export { default as ManelGLCard } from './ManelGLCard'
+export { default as ExperienceCard } from './ExperienceCard'
+export { default as SoftSkills } from './SoftSkills'
+export { default as Skills } from './Skills'
+export { default as StudiesCard } from './StudiesCard'

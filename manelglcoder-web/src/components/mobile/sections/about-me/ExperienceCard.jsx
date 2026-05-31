@@ -1,4 +1,5 @@
-import { EXPERIENCE_DATA } from "../../../../dto/about_me_dto"
+import { memo } from 'react'
+import { EXPERIENCE_DATA } from "../../../../dto"
 import { TITLE_CARD, BG_CARD, BEFORE_VERTICAL_LINE, TEXT_NORMAL, MOBILE_CARD_CLASS } from "../../../../utilities/classname_utilities"
 
 import OpenLinkButton from "../../../buttons/OpenLinkButton"
@@ -38,4 +39,4 @@ const ExperienceCard = () =>{
     )
 }
 
-export default ExperienceCard
+export default memo(ExperienceCard)

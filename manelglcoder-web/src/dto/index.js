@@ -1,0 +1,7 @@
+﻿export { PROFESSIONAL_KEY, LAST_PROJECTS_KEY, ABOUT_ME_KEY, CONCTACT_ME_KEY, OLD_PROJECTS_KEY, GALLERY_KEY } from './window_keys_dto'
+export { VERSION } from './web_version_dto'
+export { default as PROJECTS_DATA } from './projects_dto'
+export { default as PROFESSIONAL_DATA } from './professional_dto'
+export { default as OLD_PROJECTS_DATA } from './old_projects_dto'
+export { MY_GMAIL, LINKEDIN_LINK, GITHUB_LINK } from './contact_me_dto'
+export { SOFT_SKILLS_DATA, SKILLS_DATA, EXPERIENCE_DATA, STUDIES_DATA } from './about_me_dto'
