@@ -4,8 +4,16 @@ import PCScreen from './components/screen/PCScreen'
 import MobileScreen from './components/mobile/screen/MobileScreen'
 import { WindowProvider } from './contexts/WindowsContext'
 import { GalleryProvider } from './contexts/GalleryContext'
+import useAmbientStatic from './hooks/useAmbientStatic'
 
 function App() {
+  const [isGlitching, setIsGlitching] = useState(false)
+
+  useAmbientStatic(() => {
+    setIsGlitching(true)
+    setTimeout(() => setIsGlitching(false), 200)
+  })
+
   const [device, setDevice] = useState('')
   const [orientation, setOrientation] = useState('')
   const handleWindowResize = ()=> {
@@ -25,7 +33,7 @@ function App() {
       return () => null
 }, []);
   return (
-    <div className='flex h-dvh w-dvw select-none crt-overlay relative'>
+    <div className={`flex h-dvh w-dvw select-none crt-overlay relative${isGlitching ? ' glitch-split' : ''}`}>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <WindowProvider>
         <GalleryProvider>
