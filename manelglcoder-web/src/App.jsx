@@ -25,7 +25,7 @@ function App() {
       return () => null
 }, []);
   return (
-    <div className='flex h-dvh w-dvw select-none'>
+    <div className='flex h-dvh w-dvw select-none crt-overlay relative'>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <WindowProvider>
         <GalleryProvider>
