@@ -43,7 +43,7 @@ const ContactMeWindow = ({windowKey}) =>{
                         </button>
                         <div className="flex gap-1 items-center">
                             <IconSized src={GmailIcon} alt={'Gmail Icon'}/>
-                            <span className={`${TEXT_SUB_TITLE} ${TEXT_CENTERED_WITH_ICON}`}>{MY_GMAIL}</span>
+                            <span className={`${TEXT_SUB_TITLE} ${TEXT_CENTERED_WITH_ICON} select-text`}>{MY_GMAIL}</span>
                         </div>
                     </div>
                 </div>

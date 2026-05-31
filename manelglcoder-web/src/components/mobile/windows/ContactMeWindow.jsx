@@ -22,7 +22,7 @@ const ContactMeWindow = ({windowKey}) =>{
                     <div className="flex flex-col sm:flex-row justify-center items-center sm:justify-between mx-4 my-2 gap-0 sm:gap-4">
                         <div className="flex gap-1 items-center">
                             <IconSized src={GmailIcon} alt={'Gmail Icon'}/>
-                            <span className={`${TEXT_SUB_TITLE} ${TEXT_CENTERED_WITH_ICON}`}>{MY_GMAIL}</span>
+                            <span className={`${TEXT_SUB_TITLE} ${TEXT_CENTERED_WITH_ICON} select-text`}>{MY_GMAIL}</span>
                         </div>
                         <button className={BUTTON_STYLE}
                         onClick={()=> window.open(GITHUB_LINK, "_blank")}>
